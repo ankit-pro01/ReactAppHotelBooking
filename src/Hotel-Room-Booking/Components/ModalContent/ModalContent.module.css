@@ -1,0 +1,29 @@
+.container{
+    display: block;
+}
+
+.content {
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    justify-content:space-between;;
+}
+
+.content div{
+    width: 55%;
+    padding: 10px;
+    border: 1px solid  black;
+}
+
+.content div img {
+    max-width: 100%;
+}
+
+
+
+@media (max-width : 550px){
+    .content{
+        flex-flow: column;
+        align-items: center;
+    }   
+}   

@@ -1,0 +1,605 @@
+function getGenerateAffilateLink(merchant, category, section, url, urlalias) {
+
+    var category = (category && category>0)?category:32;
+    var merchant = (merchant && merchant!='')?merchant:'amazon';
+    var section = (section && section!='')?section:'pricelist';
+
+    /* Amazon Tag Start */
+    var affiliateData = {
+        "amazon": {
+            "toptenpricelist": {
+                "mobile": "tag=digit-top10-1-21",
+                "desktop": "tag=thinkdigit-pya41-21"
+            },
+            "hotdeal": {
+                "mobile": "tag=thinkdigit-pya19-21",
+                "desktop": "tag=thinkdigit-pya19-21"
+            },
+            "pricelist": {
+                "mobile": "tag=digitamz802-21",
+                "desktop": "tag=digitamz239-21"
+            },
+            "headersticky": {
+                "mobile": "tag=digitamz806-21",
+                "desktop": "tag=thinkdigitjung87-21"
+            },
+            "sponsored": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "intext": {
+                "mobile": "tag=digitamz88-21",
+                "desktop": "tag=digitamz88-21"
+            },
+            "shopnow": {
+                "mobile": "tag=digitamz100-21",
+                "desktop": "tag=digitamz100-21"
+            },
+            "article_sponsored": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "atricle_hotdeal": {
+                "mobile": "tag=digitamz138-21",
+                "desktop": "tag=digitamz138-21"
+            },
+            "review_pricelist": {
+                "mobile": "tag=thinkdigit-pya13-21",
+                "desktop": "tag=thinkdigit-pya40-21"
+            },
+            "review_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "review_hotdeal": {
+                "mobile": "tag=thinkdigit-pya21-21",
+                "desktop": "tag=thinkdigit-pya21-21"
+            },
+            "review_merchant_sticky": {
+                "mobile": "tag=msticky1-21",
+                "desktop": "tag=msticky2-21"
+            },
+            "below_img_link": {
+                "mobile": "tag=thinkdigitjung95-21",
+                "desktop": "tag=thinkdigitjung97-21"
+            },
+            "slideshow_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "slideshow_hotdeal": {
+                "mobile": "tag=thinkdigitjung35-21",
+                "desktop": "tag=thinkdigitjung35-21"
+            },
+            "merchant_sticky": {
+                "mobile": "tag=thinkdigitjung86-21",
+                "desktop": "tag=digitamz204-21"
+            },
+            "below_img": {
+                "mobile": "tag=thinkdigit-pya16-21",
+                "desktop": "tag=thinkdigit-pya39-21"
+            },
+            "compare_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "compare_hotdeal": {
+                "mobile": "tag=general103-21",
+                "desktop": "tag=general103-21"
+            },
+            "most_searched": {
+                "mobile": "tag=general101-21",
+                "desktop": "tag=general101-21"
+            },
+            "cat_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "cat_hotdeal": {
+                "mobile": "tag=general100-21",
+                "desktop": "tag=general100-21"
+            },
+            "cont_type_mostsearched": {
+                "mobile": "tag=general105-21",
+                "desktop": "tag=general105-21"
+            },
+            "cont_type_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "cont_type_hotdeals": {
+                "mobile": "tag=general104",
+                "desktop": "tag=general104"
+            },
+            "mapping_brand": {
+                "mobile": "tag=general107-21",
+                "desktop": "tag=general107-21"
+             },
+            "brand_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+            },
+            "brand_hotdeal": {
+                "mobile": "tag=general106-21",
+                "desktop": "tag=general106-21"
+            },
+            "hotdeal_price_detail": {
+                "mobile": "tag=hot_deals1-21",
+                "desktop": "tag=hot_deals3-21"
+            },
+            "video_most_search": {
+                "mobile": "tag=video-2-21",
+                "desktop": "tag=video-2-21"
+
+            },
+            "video_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+
+            },
+            "video_hot_deals": {
+                "mobile": "tag=video-1-21",
+                "desktop": "tag=video-1-21"
+
+            },
+            "toptenlisting_sponsered": {
+                "mobile": "tag=spon-mob17-21",
+                "desktop": "tag=thinkdigit-pya17-21"
+
+            },
+            "toptenlisting_hot_deals": {
+                "mobile": "tag=thinkdigit-pya19-21",
+                "desktop": "tag=thinkdigit-pya19-21"
+
+            },
+            "product_all_price": {
+                "mobile": "tag=all-price-mob-21",
+                "desktop": "tag=all-price-desk-21"
+            },
+            "cat": {
+                "386": "tag=wm801-21",
+                "204": "tag=refrigerator802-21",
+                "536": "tag=slock803-21",
+                "537": "tag=slight803-21",
+                "36": "tag=tv804-21",
+                "534": "tag=wp805-21",
+                "318": "tag=ap806-21",
+                "208": "tag=ac807-21",
+                "202": "tag=moven808-21",
+                "621": "tag=geyser809-21"
+            },
+            "vernac": {
+                "hi": "tag=digitamz255-21",
+                "ml": "tag=digitamz310-21",
+                "te": "tag=digitamz336-21",
+                "or": "tag=digitamz390-21",
+                "mr": "tag=digitamz409-21",
+                "bh": "tag=digitamz450-21",
+                "bn": "tag=digitamz468-21",
+                "gu": "tag=digitamz484-21",
+                "asm": "tag=digitamz499-21",
+                "ta": "tag=digitamz252-21",
+                "pn": "tag=digitamz338-21",
+                "kn": "tag=digitamz362-21"
+            },
+            "defaultAff": "tag=digitamz808-21"
+        },
+        "flipkart": {
+            "toptenpricelist": {
+                "mobile": "&affExtParam1=mobile_mapped_table&affExtParam2=top_10",
+                "desktop": "&affExtParam1=desktop_mapped_table&affExtParam2=top_10"
+            },
+            "hotdeal": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=top_10",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=top_10"
+            },
+            "pricelist": {
+                "mobile": "&affExtParam1=price_list_mobile&affExtParam2=product_page",
+                "desktop": "&affExtParam1=price_list_desktop&affExtParam2=product_page"
+            },
+            "headersticky": {
+                "mobile": "&affExtParam1=header_sticky_mobile&affExtParam2=product_page",
+                "desktop": "&affExtParam1=header_sticky_desktop&affExtParam2=product_page"
+            },
+            "sponsored": {
+                "mobile": "&affExtParam1=spon-mob&affExtParam2=product_page",
+                "desktop": "&affExtParam1=spon-desktop&affExtParam2=product_page"
+            },
+            "intext": {
+                "mobile": "&affExtParam1=in-text-links_mob&affExtParam2=article",
+                "desktop": "&affExtParam1=in-text-links_desktop&affExtParam2=article"
+            },
+            "shopnow": {
+                "mobile": "&affExtParam1=shop_now_mob&affExtParam2=article",
+                "desktop": "&affExtParam1=shop_now_desktop&affExtParam2=article"
+            },
+            "article_sponsored": {
+                "mobile": "&affExtParam1=sponserod_mob_product_page&affExtParam2=article",
+                "desktop": "&affExtParam1=sponserod_desktop_product_page&affExtParam2=article"
+            },
+            "atricle_hotdeal": {
+            "mobile": "&affExtParam1=where-to-buy&affExtParam2=article",
+            "desktop": "&affExtParam1=where-to-buy&affExtParam2=article"
+            },
+            "review_pricelist": {
+                "mobile": "&affExtParam1=price_list_mobile&affExtParam2=review",
+                "desktop": "&affExtParam1=price_list_desktop&affExtParam2=review"
+            },
+            "review_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob_product_page&affExtParam2=review",
+                "desktop": "&affExtParam1=sponserod_desktop_product_page&affExtParam2=review"
+            },
+            "review_hotdeal": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=review",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=review"
+            },
+            "review_merchant_sticky": {
+                "mobile": "&affExtParam1=header_sticky_mobile&affExtParam2=review",
+                "desktop": "&affExtParam1=header_sticky_desktop&affExtParam2=review"
+            },
+            "below_img_link": {
+                "mobile": "&affExtParam1=below_image_slide_mobile&affExtParam2=slideshow",
+                "desktop": "&affExtParam1=below_image_slide_desktop&affExtParam2=slideshow"
+            },
+            "slideshow_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob_slide_page&affExtParam2=slideshow",
+                "desktop": "&affExtParam1=sponserod_desktop_slide_page&affExtParam2=slideshow"
+            },
+            "slideshow_hotdeal": {
+                "mobile": "&affExtParam1=hot_deals_slide&affExtParam2=slideshow",
+                "desktop": "&affExtParam1=hot_deals_slide&affExtParam2=slideshow"
+            },
+            "merchant_sticky": {
+                "mobile": "&affExtParam1=header_sticky_mobile&affExtParam2=comp_page",
+                "desktop": "&affExtParam1=header_sticky_desktop&affExtParam2=comp_page"
+            },
+            "below_img": {
+                "mobile": "&affExtParam1=below_product_image_mob&affExtParam2=comp_page",
+                "desktop": "&affExtParam1=below_product_image_desktop&affExtParam2=comp_page"
+            },
+            "compare_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob_page&affExtParam2=comp_page",
+                "desktop": "&affExtParam1=sponserod_desktop&affExtParam2=comp_page"
+            },
+            "compare_hotdeal": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=comp_page",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=comp_page"
+            },
+            "most_searched": {
+                "mobile": "&affExtParam1=most_search&affExtParam2=cat_page",
+                "desktop": "&affExtParam1=most_search&affExtParam2=cat_page"
+            },
+            "cat_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob_cat_page&affExtParam2=cat_page",
+                "desktop": "&affExtParam1=sponserod_desktop&affExtParam2=cat_page"
+            },
+            "cat_hotdeal": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=cat_page",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=cat_page"
+            },
+            "cont_type_mostsearched": {
+                "mobile": "&affExtParam1=most_search&affExtParam2=content_type_page",
+                "desktop": "&affExtParam1=most_search&affExtParam2=content_type_page"
+            },
+            "cont_type_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob_content_type_page&affExtParam2=content_type_page",
+                "desktop": "&affExtParam1=sponserod_desktop_content_type_page&affExtParam2=content_type_page"
+            },
+            "cont_type_hotdeals": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=content_type_page",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=content_type_page"
+            },
+            "mapping_brand": {
+                "mobile": "&affExtParam1=mapping_mob&affExtParam2=brand_page",
+                "desktop": "&affExtParam1=mapping_desktop&affExtParam2=brand_page"
+            },
+            "brand_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob&affExtParam2=brand_page",
+                "desktop": "&affExtParam1=sponserod_desktop&affExtParam2=brand_page"
+            },
+            "brand_hotdeal": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=brand_page",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=brand_page"
+            },
+            "hotdeal_price_detail": {
+                "mobile": "&affExtParam1=price_detail_mob&affExtParam2=hot_deals_page",
+                "desktop": "&affExtParam1=price_detail_desk&affExtParam2=hot_deals_page"
+            },
+            "video_most_search": {
+                "mobile": "&affExtParam1=most_searched&affExtParam2=video_page",
+                "desktop": "&affExtParam1=most_searched&affExtParam2=video_page"
+            },
+            "video_sponsered": {
+                "mobile": "&affExtParam1=sponserod_mob&affExtParam2=video_page",
+                "desktop": "&affExtParam1=sponserod_desktop&affExtParam2=video_page"
+            },
+            "video_hot_deals": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=video_page",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=video_page"
+            },
+            "toptenlisting_sponsered": {
+                "mobile": "&affExtParam1=spon-mob&affExtParam2=top_10",
+                "desktop": "&affExtParam1=spon-desktop&affExtParam2=top_10"
+            },
+            "toptenlisting_hot_deals": {
+                "mobile": "&affExtParam1=hot_deals&affExtParam2=top_10",
+                "desktop": "&affExtParam1=hot_deals&affExtParam2=top_10"
+            },
+            "product_all_price": {
+                "mobile": "&affExtParam1=all-price-list-mob&affExtParam2=product_page",
+                "desktop": "&affExtParam1=all-price-list-desktop&affExtParam2=product_page"
+            },
+            "cat": {
+                "386": "&affExtParam1=washing-machine&affExtParam2=all site",
+                "204": "&affExtParam1=refrigerator&affExtParam2=all site",
+                "536": "&affExtParam1=smart-locks&affExtParam2=all site",
+                "537": "&affExtParam1=smart-lights&affExtParam2=all site",
+                "36": "&affExtParam1=tv&affExtParam2=all site",
+                "534": "&affExtParam1=water-purifiers&affExtParam2=all site",
+                "318": "&affExtParam1=air-purifiers&affExtParam2=all site",
+                "208": "&affExtParam1=ac&affExtParam2=all site",
+                "202": "&affExtParam1=microwave-oven&affExtParam2=all site",
+                "621": "&affExtParam1=geyseroven&affExtParam2=all site"
+            },
+            "vernac": {
+                "hi": "&affExtParam1=Hindi&affExtParam2=vernac",
+                "ml": "&affExtParam1=Malayalam&affExtParam2=vernac",
+                "te": "&affExtParam1=Telugu&affExtParam2=vernac",
+                "or": "&affExtParam1=Oriya&affExtParam2=vernac",
+                "mr": "&affExtParam1=Marathi&affExtParam2=vernac",
+                "bh": "&affExtParam1=Bhojpuri&affExtParam2=vernac",
+                "bn": "&affExtParam1=Bangla&affExtParam2=vernac",
+                "gu": "&affExtParam1=Gujarati&affExtParam2=vernac",
+                "asm": "&affExtParam1=Assamese&affExtParam2=vernac",
+                "ta": "&affExtParam1=Tamil&affExtParam2=vernac",
+                "pn": "&affExtParam1=Punjabi&affExtParam2=vernac",
+                "kn": "&affExtParam1=Kannada&affExtParam2=vernac"
+            },
+            "defaultAff": "&affExtParam1=hot_deals&affExtParam2=product_page"
+        },
+        "paytm": {
+            "toptenpricelist": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_top_10_mobile_mapped_table&utm_term=mobile_mapped_table&utm_content=top_10",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_top_10_desktop_mapped_table&utm_term=desktop_mapped_table&utm_content=top_10"
+            },
+            "hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=spon-digit_top_10_hot_deals&utm_term=hot_deals&utm_content=top_10",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=spon-digit_top_10_hot_deals&utm_term=hot_deals&utm_content=top_10"
+            },
+            "pricelist": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=price_list_mobile_product_page&utm_term=price_list_mobile&utm_content=product_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=price_list_desktop_product_page&utm_term=price_list_desktop&utm_content=product_page"
+            },
+            "headersticky": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=header_sticky_mobile_product_page&utm_term=header_sticky_mobile&utm_content=product_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=header_sticky_desktop_product_page&utm_term=header_sticky_desktop&utm_content=product_page"
+            },
+            "sponsored": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=spon-mob_product_page&utm_term=spon-mob&utm_content=product_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=spon-desktop_product_page&utm_term=spon-desktop&utm_content=product_page"
+            },
+            "intext": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=in-text-links_mob_article&utm_term=in-text-links_mob&utm_content=article",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=in-text-links_desktop_article&utm_term=in-text-links_desktop&utm_content=article"
+            },
+            "shopnow": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=shop_now_mob_article&utm_term=shop_now_mob&utm_content=article",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=shop_now_desktop_article&utm_term=shop_now_desktop&utm_content=article"
+            },
+            "article_sponsored": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=sponserod_mob_product_page_article&utm_term=sponserod_mob_product_page&utm_content=article",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=sponserod_desktop_product_page_article&utm_term=sponserod_desktop_product_page&utm_content=article"
+            },
+            "atricle_hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=where-to-buy_article&utm_term=where-to-buy&utm_content=article",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=where-to-buy_article&utm_term=where-to-buy&utm_content=article"
+            },
+            "review_pricelist": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_price_list_mobile_review&utm_term=price_list_mobile&utm_content=review",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_price_list_desktop_review&utm_term=price_list_desktop&utm_content=review"
+            },
+            "review_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_product_page_review&utm_term=sponserod_mob_product_page&utm_content=review",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_product_page_review&utm_term=sponserod_desktop_product_page&utm_content=review"
+            },
+            "review_hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_review&utm_term=hot_deals&utm_content=review",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_review&utm_term=hot_deals&utm_content=review"
+            },
+            "review_merchant_sticky": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_header_sticky_mobile_review&utm_term=header_sticky_mobile&utm_content=review",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_header_sticky_desktop_review&utm_term=header_sticky_desktop&utm_content=review"
+            },
+            "below_img_link": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_below_image_slide_mobile_slideshow&utm_term=below_image_slide_mobile&utm_content=slideshow",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_below_image_slide_desktop_slideshow&utm_term=below_image_slide_desktop&utm_content=slideshow"
+            },
+            "slideshow_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_slide_page_slideshow&utm_term=sponserod_mob_slide_page&utm_content=slideshow",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_slide_page_slideshow&utm_term=sponserod_desktop_slide_page&utm_content=slideshow"
+            },
+            "slideshow_hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_slide_slideshow&utm_term=hot_deals_slide&utm_content=slideshow",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_slide_slideshow&utm_term=hot_deals_slide&utm_content=slideshow"
+            },
+            "merchant_sticky": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_header_sticky_mobile_comp_page&utm_term=header_sticky_mobile&utm_content=comp_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_header_sticky_desktop_comp_page&utm_term=header_sticky_desktop&utm_content=comp_page"
+            },
+            "below_img": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_below_product_image_mob_comp_page&utm_term=below_product_image_mob&utm_content=comp_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_below_product_image_desktop_comp_page&utm_term=below_product_image_desktop&utm_content=comp_page"
+            },
+            "compare_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_page_comp_page&utm_term=sponserod_mob_page&utm_content=comp_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_comp_page&utm_term=sponserod_desktop&utm_content=comp_page"
+            },
+            "compare_hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_comp_page&utm_term=hot_deals&utm_content=comp_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_comp_page&utm_term=hot_deals&utm_content=comp_page"
+            },
+            "most_searched": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_most_search_cat_page&utm_term=most_search&utm_content=cat_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_most_search_cat_page&utm_term=most_search&utm_content=cat_page"
+            },
+            "cat_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_cat_page_cat_page&utm_term=sponserod_mob_cat_page&utm_content=cat_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_cat_page&utm_term=sponserod_desktop&utm_content=cat_page"
+            },
+            "cat_hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_cat_page&utm_term=hot_deals&utm_content=cat_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_cat_page&utm_term=hot_deals&utm_content=cat_page"
+            },
+            "cont_type_mostsearched": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_most_search_content_type_page&utm_term=most_search&utm_content=content_type_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_most_search_content_type_page&utm_term=most_search&utm_content=content_type_page"
+            },
+            "cont_type_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_content_type_page_content_type_page&utm_term=sponserod_mob_content_type_page&utm_content=content_type_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_content_type_page_content_type_page&utm_term=sponserod_desktop_content_type_page&utm_content=content_type_page"
+            },
+            "cont_type_hotdeals": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_content_type_page&utm_term=hot_deals&utm_content=content_type_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_content_type_page&utm_term=hot_deals&utm_content=content_type_page"
+            },
+            "mapping_brand": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_mapping_mob_brand_page&utm_term=mapping_mob&utm_content=brand_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_mapping_desktop_brand_page&utm_term=mapping_desktop&utm_content=brand_page"
+            },
+            "brand_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_brand_page&utm_term=sponserod_mob&utm_content=brand_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_brand_page&utm_term=sponserod_desktop&utm_content=brand_page"
+            },
+            "brand_hotdeal": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_brand_page&utm_term=hot_deals&utm_content=brand_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_brand_page&utm_term=hot_deals&utm_content=brand_page"
+            },
+            "hotdeal_price_detail": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_price_detail_mob_hot_deals_page&utm_term=price_detail_mob&utm_content=hot_deals_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_price_detail_desk_hot_deals_page&utm_term=price_detail_desk&utm_content=hot_deals_page"
+            },
+            "video_most_search": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_most_searched_video_page&utm_term=most_searched&utm_content=video_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_most_searched_video_page&utm_term=most_searched&utm_content=video_page"
+            },
+            "video_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_mob_video_page&utm_term=sponserod_mob&utm_content=video_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_sponserod_desktop_video_page&utm_term=sponserod_desktop&utm_content=video_page"
+            },
+            "video_hot_deals": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_video_page&utm_term=hot_deals&utm_content=video_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_hot_deals_video_page&utm_term=hot_deals&utm_content=video_page"
+            },
+            "toptenlisting_sponsered": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=spon-mob_top_10&utm_term=spon-mob&utm_content=top_10",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=spon-desktop_top_10&utm_term=spon-desktop&utm_content=top_10"
+            },
+            "toptenlisting_hot_deals": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_top_10_hot_deals&utm_term=hot_deals&utm_content=top_10",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_top_10_hot_deals&utm_term=hot_deals&utm_content=top_10"
+            },
+            "product_all_price": {
+                "mobile": "utm_source=digit&utm_medium=affiliate&utm_campaign=all-price-list-mob_product_page&utm_term=all-price-list-mob&utm_content=product_page",
+                "desktop": "utm_source=digit&utm_medium=affiliate&utm_campaign=all-price-list-desktop_product_page&utm_term=all-price-list-desktop&utm_content=product_page"
+            },
+            "cat": {
+                "386": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_washing-machine&utm_term=washing-machine&utm_content=all site",
+                "204": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_refrigerator&utm_term=refrigerator&utm_content=all site",
+                "536": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_smart-locks&utm_term=smart-locks&utm_content=all site",
+                "537": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_smart-lights&utm_term=smart-lights&utm_content=all site",
+                "36": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_tv&utm_term=tv&utm_content=all site",
+                "534": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_water-purifiers&utm_term=water-purifiers&utm_content=all site",
+                "318": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_air-purifiers&utm_term=air-purifiers&utm_content=all site",
+                "208": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_ac&utm_term=ac&utm_content=all site",
+                "202": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_microwave-oven&utm_term=microwave-oven&utm_content=all site",
+                "621": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_product_page_geyser&utm_term=geyser&utm_content=all site"
+            },
+            "vernac": {
+                "hi": "utm_source=digit&utm_medium=affiliate&utm_campaign=digit_vernac_Hindi&utm_term&utm_content=vernac",
+                "ml": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Malayalam&utm_content=vernac",
+                "te": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Telugu&utm_content=vernac",
+                "or": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Oriya&utm_content=vernac",
+                "mr": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Marathi&utm_content=vernac",
+                "bh": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Bhojpuri&utm_content=vernac",
+                "bn": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Bangla&utm_content=vernac",
+                "gu": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Gujarati&utm_content=vernac",
+                "asm": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Assamese&utm_content=vernac",
+                "ta": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Tamil&utm_content=vernac",
+                "pn": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Punjabi&utm_content=vernac",
+                "kn": "utm_source=digit&utm_medium=affiliate&utm_campaign&utm_term=digit_vernac_Kannada&utm_content=vernac"
+            },
+            "defaultAff": "utm_source=digit&utm_medium=affiliate&utm_campaign=hot_deals_product_page&utm_term=hot_deals&utm_content=product_page"
+        }
+    }
+
+
+    merchant = merchant.toLowerCase();
+    section = section.toLowerCase();
+    var affilateLink = defaultAffilateLink = categoryAffilateLink = langAffilate = "";
+
+    if (merchant && affiliateData[merchant]) {
+        affilateLink = affiliateData[merchant];
+        defaultAffilateLink = affiliateData[merchant]["defaultAff"];
+        categoryAffilateLink = affiliateData[merchant]['cat'];
+        langAffilate = affiliateData[merchant]['vernac'];
+    }
+    
+    var generatedAffilateLink = getAffilateLink(affilateLink, defaultAffilateLink, categoryAffilateLink, langAffilate, category, section);
+    if (merchant == 'paytm') {
+        intermidiateUrl = domainUrl + merchant + '/tracker/' + urlalias + '/';
+        checkQuestionMark = (/\?/i.test(url)) ? '&' : '?';
+        generatedLink = 'url=' + url + checkQuestionMark + generatedAffilateLink;
+        finalGeneratedLink = intermidiateUrl + encodeURIComponent(generatedLink);
+    } else
+        if (merchant == 'flipkart') {
+            intermidiateUrl = domainUrl + merchant + '/intermediate?url=';
+            url = intermidiateUrl + url;
+            checkQuestionMark = (/\?/i.test(url)) ? '&' : '?';
+            generatedAffilateLink = generatedAffilateLink.replace(/(^&)/igm, '');
+            finalGeneratedLink = url + checkQuestionMark + generatedAffilateLink;
+        } else
+            if (merchant == 'amazon') {
+                intermidiateUrl = domainUrl + merchant + '/intermediate?url=';
+                url = intermidiateUrl + url;
+                checkQuestionMark = (/\?/i.test(url)) ? '?' : '?';
+                finalGeneratedLink = url + checkQuestionMark + generatedAffilateLink;
+            } else {
+                intermidiateUrl = domainUrl + merchant + '/intermediate?url=';
+                url = intermidiateUrl + url;
+                checkQuestionMark = '';
+                finalGeneratedLink = url + checkQuestionMark + generatedAffilateLink;
+            }
+
+    return finalGeneratedLink;
+}
+
+/*
+ * **************************************************************************
+ * Method Name      :   getAffilateLink
+ * Description      :   get the method to generate Merchant Tag
+ * Param            :   list of parameter              
+ * **************************************************************************
+ */
+
+function getAffilateLink(affilateLink, defaultAffilateLink, categoryAffilateLink, langAffilate, category, section) {
+
+   
+    var finalAffilateLink = defaultAffilateLink;
+    var categoryList = ["386", "204", "536", "537", "36", "534", "318", "208", "202", "621"];
+    if (LANGUAGE == 'en') {
+        if ($.inArray(category, categoryList) == -1 && affilateLink[section] && affilateLink[section][deviceType]) {
+
+            finalAffilateLink = affilateLink[section][deviceType];
+
+        } else {
+            if ($.inArray(category, categoryList) > -1) {
+                finalAffilateLink = categoryAffilateLink[category];
+            }
+        }
+    } else {
+        if (langAffilate[LANGUAGE]) {
+            finalAffilateLink = langAffilate[LANGUAGE];
+        }
+    }
+    return finalAffilateLink;
+}
