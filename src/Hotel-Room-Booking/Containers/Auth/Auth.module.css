@@ -1,0 +1,9 @@
+.AuthContainer{
+    margin: 10% auto;
+    padding: 10px;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px lightblue;
+    border: 0.5px solid mediumblue;
+}

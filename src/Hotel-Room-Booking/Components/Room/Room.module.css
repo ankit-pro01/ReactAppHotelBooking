@@ -1,0 +1,17 @@
+.box {
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    display: flex;
+    flex-basis: 200px;
+    justify-content: space-evenly;
+}
+
+.box div{
+    width : 300px;
+}
+
+.box img{
+    box-sizing: border-box;
+    width: 100%;
+}

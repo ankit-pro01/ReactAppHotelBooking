@@ -1,0 +1,27 @@
+.Sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    transition: all 0.5s ease-out;
+    z-index: 200;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+}
+
+.Sidebar nav {
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width : 550px){
+    .Sidebar{
+        display: none;
+    }
+}
