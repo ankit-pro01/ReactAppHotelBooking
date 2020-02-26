@@ -1,7 +1,7 @@
 import * as actionTypes from "./actionTypes";
 
-export const modaldata = (name,img, info) => {
-    let data = {name, img, info} 
+export const modaldata = (roomData) => {
+    let data = roomData;
     return {
         type : actionTypes.MODAL_DATA,
         data : data

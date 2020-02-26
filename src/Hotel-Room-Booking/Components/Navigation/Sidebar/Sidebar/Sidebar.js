@@ -6,7 +6,7 @@ import Logo from "../../../UI/logo/logo";
 const sidebar = (props) => {
     
     return(
-        <div className = {classes.Sidebar}>
+        <div className = {classes.Sidebar} style = {{transform : props.show ? "translateX(0)": "translateX(-100vh)"}}>
             <nav>
                 <Navigation />
             </nav>

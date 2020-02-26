@@ -5,12 +5,27 @@
     left: 15%;
     top : 20%;
     box-sizing: border-box;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 0px 2px 2px black;
     width: 70%;
     height: 70%;
     display: block;
     z-index: 500;
     transition: all 0.3s ease-out;
+}
+.close{
+    position: absolute;
+    right : 0;
+    color: blue;
+    font-size: 200%;
+    font-weight: bolder;
+    opacity: 0.5;
+    transition: all .6s ease;
+
+}
+.close:hover{
+    font-size: 300%;
+    opacity: 1;
+    color: chocolate;
 }
 
 @media (min-width: 600px) {

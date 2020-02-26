@@ -28,21 +28,12 @@ class Rooms extends Component {
     
     }
 
-    handleModal = (name, img, info) => {
-        
-        console.log(name, img, info);
-        
+    handleModal = (data) => {
 
-        if(this.state.showModal){
-            this.setState({...this.state, showModal : false})
+            this.setState({...this.state, showModal : !this.state.showModal})
+            this.props.handleModalData(data);
         }
-        else{
-            this.setState({...this.state, showModal : true})
-        };
 
-        this.props.handleModalData(name, img, info);
-
-    }
 
     render(){
 
@@ -59,11 +50,10 @@ class Rooms extends Component {
 
         let products = (
             this.props.state.searchRoom.map(r => {
-                return <Room key = {r.id}  imgSrc = {r.img} name = {r.name}  click = 
-                {() => this.handleModal(r.name, r.img, r.info)}/>
+                return <Room key = {r.id}  imgSrc = {r.img} name = {r.name} id = {r.id} click = 
+                {() => this.handleModal(r)}/>
             })
         )
-        console.log(this.props.state.modalData);
         
         return(
             <div>
@@ -90,7 +80,7 @@ const mapStateToProps = (state) =>{
 const mapStateToDispatch = (dispatch) => {
     return {
         SearchRoomHandle : (value) => dispatch(actions.searchRoom(value)),
-        handleModalData : (name, img, info) => dispatch(actions.modaldata(name,img,info))
+        handleModalData : (data) => dispatch(actions.modaldata(data))
     }
 }
 

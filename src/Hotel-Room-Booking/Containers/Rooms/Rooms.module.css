@@ -18,8 +18,6 @@
     flex-flow: column;
 }
 
-
-
 @media (min-width : 550px){
     .Rooms{
         flex-flow: row;
