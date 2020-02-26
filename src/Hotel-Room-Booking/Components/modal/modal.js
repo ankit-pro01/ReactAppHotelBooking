@@ -13,7 +13,7 @@ const modal = (props) => {
            <Backdrop show = {props.show} click = {props.close}/>
             <div className = {classes.modal} style = {{transform : props.show ? "translateY(0)" :"translateY(-100vh)"}}>
                 <span className = {classes.close}>x</span>
-                <Title heading = {props.name}/> 
+                <h2>{props.name} </h2>
                 {props.children}
              </div>
         </Aux>
