@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-
 import Input from '../../Components/UI/input/input';
 import Spinner from '../../Components/UI/Spinner/spinner';
 import classes from "./Auth.module.css";
 import Button from "../../Components/UI/button/button";
 import { Link } from "react-router-dom";
-
 import {connect} from "react-redux";
-
 import * as actions from '../../store/actions/index';
+import backImg from "../../assets/img/loginImg/Login.svg";
+import formImg from "../../assets/img/loginImg/forgot_password.svg"
 
 class Auth extends Component {
 
@@ -92,8 +91,8 @@ class Auth extends Component {
             
         let form = ( 
             <div className = {classes.AuthContainer}>
+                <img src= {backImg}></img>
                 <form style = {{"textAlign" : "center"}} onSubmit = {this.handleSubmit} >
-
                     <h2 style = {{"color" : "mediumBlue"}}>{Sign}</h2>
 
                     <Input  type = "email" name = "email" placeholder = "mail id" onChange = {this.handleChange} />
@@ -104,15 +103,14 @@ class Auth extends Component {
                     {Sign === "Sign In" ? <p style = {{"color" : "red"}}> {this.state.passwordError} </p>: null}
 
                     <Button disabled = {(buttonConfig)}>Submit</Button>
+            
+                    {forgotPassword}   
 
+                    <Button clicked = {this.handleSign}>{Sign === "Sign In"?  "Log In" : "Sign-In"}</Button>
+
+                    <p style = {{"color" : "red"}}>{this.props.st.message}</p>
+                    <img src= {formImg}></img>
                 </form>
-
-                {forgotPassword}   
-
-                <Button clicked = {this.handleSign}>{Sign === "Sign In"?  "Log In" : "Sign-In"}
-                </Button>
-
-                <p style = {{"color" : "red"}}>{this.props.st.message}</p>
 
             </div>
             

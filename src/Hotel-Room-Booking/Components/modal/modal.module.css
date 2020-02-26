@@ -28,6 +28,21 @@
     color: chocolate;
 }
 
+.modal h2{
+    text-transform: capitalize;
+    color: mediumblue;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: mymove 5s infinite;
+    text-align: center;
+}
+
+@keyframes mymove {
+  from {transform:0px;}
+  to {transform: scale(1.4);}
+
+}
+
 @media (min-width: 600px) {
     .Modal {
         width: 500px;
