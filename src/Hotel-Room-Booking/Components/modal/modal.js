@@ -6,17 +6,17 @@ import Backdrop from "../UI/backdrop/backdrop";
 
 const modal = (props) => {
 
-    let modal = (<Aux>
-                    <Backdrop show = {props.show} click = {props.close}/>
-
-                    <div className = {classes.modal}>
-                    <Title heading = {props.name}/>
-                        {props.children}
-                    </div>
-            
-                </Aux>)
+    //let modal = ()
     return(
-        props.show ? modal :null
+        //props.show ? modal :null
+        <Aux>
+           <Backdrop show = {props.show} click = {props.close}/>
+            <div className = {classes.modal} style = {{transform : props.show ? "translateY(0)" :"translateY(-100vh)"}}>
+                <span className = {classes.close}>x</span>
+                <Title heading = {props.name}/> 
+                {props.children}
+             </div>
+        </Aux>
     )
 }
 

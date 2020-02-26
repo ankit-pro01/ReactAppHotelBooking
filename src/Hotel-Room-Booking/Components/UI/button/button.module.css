@@ -21,3 +21,7 @@
     /* color: green; */
     transform: scale(1.2);
   }
+
+  .danger {
+    color: red;
+  }

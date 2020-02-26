@@ -1,17 +1,21 @@
 import React from "react";
 import classes from "./ModalContent.module.css";
+import Button from "../UI/button/button";
 
 const modalContent = (props) => {
     return(
         <div className = {classes.container} >
             <div className = {classes.content}>
-                <div><img src = {props.roomData.img}></img></div>
-                <div><b>INFO:</b>
-                <p>{props.roomData.info}</p>
-                <p><b>price:</b>1000</p>
+                <img src = {props.roomData.img}></img>
+                <div className = {classes.infoDiv}><p><b style={{color : "mediumBlue"}}>PRICE:-</b>{props.roomData.price} /person</p>
+                    <b style = {{color : "mediumBlue"}}>INFO:-</b>
+                    <p>{props.roomData.info}</p>
                 </div>
             </div>
-            <div>ajskfafklsdfmsldsdl;fsd;lfsdf;ls</div>
+            <div className = {classes.btnDiv}>
+                <Button btnType = "danger">cancel</Button>
+                <Button>continue</Button>
+            </div>
         </div>
     )
 }

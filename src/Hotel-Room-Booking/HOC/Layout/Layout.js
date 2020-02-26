@@ -19,14 +19,15 @@ class Layout extends Component {
     }
 
     render() {
-        let sidebar =  this.state.sidebarOpen ? (<div><Sidebar/>
-            <Backdrop show = {this.state.sidebarOpen} click = {this.handleToolBar} />
-            </div>) : null
+        //let sidebar =  this.state.sidebarOpen ?(<div> : null
 
         return (
             <Aux>
+                
+                <Backdrop show = {this.state.sidebarOpen} click = {this.handleToolBar} />
                 <Toolbar toggleClick = {this.handleToolBar}/>
-                {sidebar}
+                {/* //{sidebar} */}
+                <Sidebar show =  {this.state.sidebarOpen}/>
                 <main className = {classes.Content}>
                     {this.props.children}
                 </main> 
