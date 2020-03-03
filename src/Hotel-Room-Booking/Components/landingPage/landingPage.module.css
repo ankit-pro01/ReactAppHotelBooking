@@ -1,0 +1,16 @@
+.section{
+    margin-top: 60px;
+}
+
+.section div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+.section div h1{
+    text-align: center;
+}
+
+.section div img {
+    width: 100%;
+}

@@ -3,10 +3,10 @@ import myLogo from "../../../assets/img/logo/resort-icon.png";
 import classes from "./logo.module.css";
 
 
-const logo = () => {
+const logo = (props) => {
     return(
         <div className = {classes.logo}>
-            <img src= {myLogo} alt = "mylogo" >
+            <img src= {myLogo} alt = "mylogo" width = {props.width}>
             </img>
         </div>
     )
