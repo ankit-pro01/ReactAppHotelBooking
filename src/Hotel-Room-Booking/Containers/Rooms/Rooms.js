@@ -39,8 +39,8 @@ class Rooms extends Component {
 
         let Search = (
             <form className = {classes.Search} onSubmit = {this.searchButtonHandler}>
-                 <Input   type = "input" placeholder = "search rooms"
-                 label ="search rooms"  onChange = {this.searchHandler} name = "search" />
+                 <Input   type = "input" placeholder = "Room Type"
+                 label ="Search Rooms"  onChange = {this.searchHandler} name = "search" />
                  <Input  type = "date" placeholder = "checkIn" label = "CheckIn" name = "checkIn" />
                  <Input  type = "date" placeholder = "checkOut" label = "CheckOut" name= "checkOut"/>
                  <Button type = "submit" >search</Button>
@@ -57,7 +57,7 @@ class Rooms extends Component {
         
         return(
             <div>
-                <Title heading = "Our Rooms"/>
+                <Title heading = "OUR ROOMS"/>
                 <Modal show = {this.state.showModal} close = {this.handleModal} name =
                  {this.props.state.modalData.name}>
                     <ModalContent roomData = {this.props.state.modalData}/>

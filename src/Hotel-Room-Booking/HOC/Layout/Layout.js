@@ -22,12 +22,10 @@ class Layout extends Component {
         //let sidebar =  this.state.sidebarOpen ?(<div> : null
 
         return (
-            <Aux>
-                
-                <Backdrop show = {this.state.sidebarOpen} click = {this.handleToolBar} />
+            <Aux>           
                 <Toolbar toggleClick = {this.handleToolBar}/>
-                {/* //{sidebar} */}
                 <Sidebar show =  {this.state.sidebarOpen}/>
+                <Backdrop show = {this.state.sidebarOpen} click = {this.handleToolBar} />
                 <main className = {classes.Content}>
                     {this.props.children}
                 </main> 

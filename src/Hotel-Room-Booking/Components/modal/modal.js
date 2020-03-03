@@ -11,8 +11,7 @@ const modal = (props) => {
         //props.show ? modal :null
         <Aux>
            <Backdrop show = {props.show} click = {props.close}/>
-            <div className = {classes.modal} style = {{transform : props.show ? "translateY(0)" :"translateY(-100vh)"}}>
-                <span className = {classes.close}>x</span>
+            <div className = {classes.modal} style = {{transform : props.show ? "translateY(0)" :"translateY(-200vh)"}}>
                 <h2>{props.name} </h2>
                 {props.children}
              </div>
