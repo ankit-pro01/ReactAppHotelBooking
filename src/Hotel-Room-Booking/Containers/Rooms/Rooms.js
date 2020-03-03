@@ -35,7 +35,7 @@ class Rooms extends Component {
         }
 
 
-    render(){
+    render(){        
 
         let Search = (
             <form className = {classes.Search} onSubmit = {this.searchButtonHandler}>
@@ -60,7 +60,7 @@ class Rooms extends Component {
                 <Title heading = "OUR ROOMS"/>
                 <Modal show = {this.state.showModal} close = {this.handleModal} name =
                  {this.props.state.modalData.name}>
-                    <ModalContent roomData = {this.props.state.modalData}/>
+                    <ModalContent roomData = {this.props.state.modalData} {...this.props}/>
                 </Modal>
                 {Search}
                 <div className = {classes.Rooms}>

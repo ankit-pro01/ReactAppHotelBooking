@@ -6,6 +6,7 @@ import Auth from './Hotel-Room-Booking/Containers/Auth/Auth';
 import Cart from "./Hotel-Room-Booking/Components/Cart/Cart"
 import Rooms from './Hotel-Room-Booking/Containers/Rooms/Rooms';
 import LandingPage from './Hotel-Room-Booking/Components/landingPage/landingPage';
+import CheckOut from './Hotel-Room-Booking/Containers/CheckOut/CheckOut';
 
 class App  extends Component {
     render(){
@@ -15,6 +16,7 @@ class App  extends Component {
                 <Layout>
                     <Route path = "/login"  component = {Auth}></Route>
                     <Route path = "/rooms" exact component = {Rooms}></Route>
+                    <Route path = "/rooms/checkout" exact component = {CheckOut}></Route>
                     <Route path = "/cart" exact component = {Cart}></Route>
                 </Layout>
             </div>

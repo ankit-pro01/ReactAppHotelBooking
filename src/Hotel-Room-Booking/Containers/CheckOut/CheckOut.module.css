@@ -1,0 +1,42 @@
+.checkOut{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+h2{
+    text-align: center;
+}
+.checkOut form {
+    width: 40%;
+}
+
+.checkOut form div{
+    margin: 10px;
+}
+
+
+.checkOut img {
+    width: 100%;
+}
+
+.Image{
+    width: 45%;
+}
+
+
+@media (max-width : 550px){
+    .checkOut{
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+    .checkOut form {
+        width: 90%;
+    }
+    .Image{
+        width: 100%;
+    }
+        
+}

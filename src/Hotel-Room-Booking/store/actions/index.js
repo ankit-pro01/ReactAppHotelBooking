@@ -7,5 +7,5 @@ export {
 } from "./searchRoom";
 
 export {
-    modaldata
+    modaldata, checkOut
 } from "./modalData"

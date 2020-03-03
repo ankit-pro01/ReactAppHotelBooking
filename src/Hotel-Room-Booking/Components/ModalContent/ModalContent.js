@@ -2,6 +2,16 @@ import React from "react";
 import classes from "./ModalContent.module.css";
 import Button from "../UI/button/button";
 
+
+
+const goToCheckOut = (props) => {
+    console.log(props);
+    
+    props.history.push("/rooms/checkout")    
+}
+
+
+
 const modalContent = (props) => {
     return(
         <div className = {classes.container} >
@@ -14,7 +24,8 @@ const modalContent = (props) => {
             </div>
             <div className = {classes.btnDiv}>
                 <Button btnType = "danger">cancel</Button>
-                <Button>continue</Button>
+                <Button clicked = {() => goToCheckOut(props)}>continue</Button>
+
             </div>
         </div>
     )

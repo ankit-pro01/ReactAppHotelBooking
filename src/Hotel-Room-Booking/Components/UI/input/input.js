@@ -14,6 +14,9 @@ const input = ( props ) => {
         case ( 'date' ):
             inputElement = <input className = {classes.InputElement} {...props} />
             break;
+        case ( 'select' ):
+            inputElement = <select className = {classes.InputElement} {...props}>{props.children}</select>
+            break;
         default:
             inputElement = <input className = {classes.InputElement} {...props}/>
     }
