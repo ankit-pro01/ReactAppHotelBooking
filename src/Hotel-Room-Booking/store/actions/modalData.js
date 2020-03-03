@@ -7,3 +7,11 @@ export const modaldata = (roomData) => {
         data : data
     }
 };
+
+
+export const checkOut = (data) => {
+    return{
+        type : actionTypes.CHECK_OUT,
+        data : data
+    }
+}

@@ -5,8 +5,6 @@
     justify-content: center;
     flex-flow: column;
     flex-wrap: wrap;
-
-
 }
 
 .Search{
@@ -18,7 +16,7 @@
     flex-flow: column wrap;
 }
 
-@media (min-width : 550px){
+@media (min-width : 600px){
     .Rooms{
         flex-flow: row;
         flex-wrap: wrap;
@@ -26,9 +24,8 @@
     .Search{
         margin: auto;
         box-sizing: border-box;
-        width: 80%;
         display: flex;
         justify-content: center;
-        flex-flow: row;
+        flex-flow: row  wrap;
     }
 }

@@ -6,3 +6,5 @@ export const AUTH_FAIL = "AUTH_FAIL";
 export const SEARCH_ROOM = "SEARCH_ROOM";
 
 export const MODAL_DATA = "MODAL_DATA";
+
+export const CHECK_OUT = "CHECK_OUT";
