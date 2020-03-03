@@ -1,27 +1,17 @@
 .modal{
+    border-radius: 10px;
     position: fixed;
     overflow: auto;
-    background-color: white;
+    background-image: url("../../assets/img/landingpage/CoolSky.jpg");
     left: 15%;
-    top : 20%;
+    top : 10%;
     box-sizing: border-box;
-    box-shadow: 0px 2px 2px black;
     width: 70%;
-    height: 70%;
-    display: block;
+    height: 85vh;
     z-index: 500;
     transition: all 0.3s ease-out;
 }
-.close{
-    position: absolute;
-    right : 0;
-    color: blue;
-    font-size: 200%;
-    font-weight: bolder;
-    opacity: 0.5;
-    transition: all .6s ease;
 
-}
 .close:hover{
     font-size: 300%;
     opacity: 1;
@@ -33,15 +23,15 @@
     color: mediumblue;
     font-weight: bolder;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    animation: mymove 5s infinite;
     text-align: center;
 }
 
-@keyframes mymove {
+
+/* @keyframes mymove {
   from {transform:0px;}
   to {transform: scale(1.4);}
 
-}
+} */
 
 @media (min-width: 600px) {
     .Modal {

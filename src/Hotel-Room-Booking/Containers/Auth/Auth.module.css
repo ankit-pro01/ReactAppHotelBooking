@@ -1,8 +1,8 @@
 .AuthContainer {
-    margin: 10% auto;
+    margin: auto;
     padding: 10px;
     width: 80%;
-    height: 80%;
+    height: 85vh;
     box-sizing: border-box;
     display: flex;
 }
@@ -30,12 +30,12 @@
 }
 
 
-@media (max-width : 550px){
+@media (max-width : 800px){
     .AuthContainer {
         flex-flow: wrap;
     }
     .AuthContainer img{
-        width : 50px
+        width : 80px
     }
     
     

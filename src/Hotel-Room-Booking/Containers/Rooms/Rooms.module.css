@@ -15,7 +15,7 @@
     width: 80%;
     display: flex;
     justify-content: center;
-    flex-flow: column;
+    flex-flow: column wrap;
 }
 
 @media (min-width : 550px){
