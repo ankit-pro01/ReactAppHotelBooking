@@ -7,18 +7,18 @@
 }
 
 .NavigationItem a {
-    color: mediumblue;
-    text-decoration: none;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
+        text-decoration: none;
+        color: mediumblue;
+        height: 100%;
+        padding: 10px;
+        border-bottom: 4px solid transparent;
 }
 
 .NavigationItem a:hover,
 .NavigationItem a:active,
 .NavigationItem a.active {
-    color : green;
-    background-color: lightblue;
+    background-color: transparent;
+    border-bottom: 4px solid #40a4c8;
 }
 
 @media (min-width : 500px) {
