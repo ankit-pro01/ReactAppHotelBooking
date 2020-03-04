@@ -8,4 +8,8 @@ export {
 
 export {
     modaldata, checkOut
-} from "./modalData"
+} from "./modalData";
+
+export {
+    bookData
+} from "./bookData";
