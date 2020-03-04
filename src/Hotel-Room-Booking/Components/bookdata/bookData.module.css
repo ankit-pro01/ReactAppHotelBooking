@@ -1,3 +1,28 @@
 .bookData{
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
+.Img {
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.Img img{
+    width: 100%;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 80%;
+
+}
+
+@media (max-width : 600px){
+    .bookData{
+        flex-flow: column wrap;
+    }   
+    
 }

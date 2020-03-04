@@ -37,7 +37,7 @@ class CheckOut extends Component{
         }        
         if(data.checkout >= data.checkin){
             this.props.goToPayment(data);
-            this.setState({...this.state, modalOpen: true, data : data});
+            this.setState({...this.state, modalOpen: true, data : data, error : ""});
             // this.props.goToPayment(this.state.data);
         }  
         else {
@@ -52,7 +52,7 @@ class CheckOut extends Component{
         return(
             <React-fragment>
             <Modal show = {this.state.modalOpen} close = {this.closeModal}>
-                <BookData data = {this.props.bookingData.bookData}/>
+                <BookData data = {this.props.bookingData.bookData} room = {this.props.selectedRoom}/>
             </Modal>
 
             <h2>Ready For the booked.....</h2>
