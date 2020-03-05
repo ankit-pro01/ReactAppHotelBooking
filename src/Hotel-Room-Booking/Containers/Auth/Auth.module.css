@@ -9,24 +9,20 @@
 
 .AuthContainer form{
     position: relative;
-    padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 5px 5px 5px lightblue;
-    border: 0.5px solid mediumblue;
-    transition: background-color 1s ease;
-    border-radius: 5px;
+}
 
+.AuthContainer form div{
+    box-sizing: border-box;
+    margin: 10px;
+    width: 100%;
 }
 
 .AuthContainer img{
     width: 100%;
     max-width: 400px;
     height: auto;
-}
-
-.AuthContainer form:hover{
-    background-color: skyblue;
 }
 
 

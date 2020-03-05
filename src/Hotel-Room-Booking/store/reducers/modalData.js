@@ -1,6 +1,6 @@
 import * as actionTypes from "../actions/actionTypes";
 
-let initialState = {name : null,img : null, info : null, price : null,checkOutData : null}
+let initialState = {name : null,img : null, info : null, price : null,checkOutData : null, displayCheckOut : false}
 
 const modalDataReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -19,7 +19,7 @@ const modalDataReducer = (state = initialState, action) => {
             }
     
         default:
-            return state
+            return {...state}
             break;
     }
 }

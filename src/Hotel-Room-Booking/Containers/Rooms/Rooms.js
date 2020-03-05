@@ -9,6 +9,8 @@ import * as actions from "../../store/actions/index";
 import {connect} from "react-redux";
 import Modal from "../../Components/modal/modal";
 import ModalContent from "../../Components/ModalContent/ModalContent";
+import { Route } from "react-router-dom";
+import CheckOut from "../CheckOut/CheckOut";
 
 class Rooms extends Component {
     state = {
@@ -60,13 +62,14 @@ class Rooms extends Component {
                 <Title heading = "OUR ROOMS"/>
                 <Modal show = {this.state.showModal} close = {this.handleModal} name =
                  {this.props.state.modalData.name}>
-                    <ModalContent roomData = {this.props.state.modalData} {...this.props}/>
+                    <ModalContent  {...this.props} />
                 </Modal>
                 {Search}
                 <div className = {classes.Rooms}>
                     {products}
                 </div>
             </div>
+            
         )
     }
 }

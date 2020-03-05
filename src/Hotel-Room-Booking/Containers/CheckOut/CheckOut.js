@@ -6,15 +6,20 @@ import Button from "../../Components/UI/button/button";
 import * as actions from "../../store/actions/index";
 import Modal from "../../Components/modal/modal";
 import BookData from "../../Components/bookdata/bookData";
-
-
+import {Redirect} from "react-router-dom";
 
 class CheckOut extends Component{
 
     state = {
         modalOpen : false,
         error : "",
-        data : ""
+        data : "",
+        display :false,
+    }
+
+    componentDidMount = () => {
+        console.log("hello");
+        
     }
 
     closeModal = () =>{
@@ -38,7 +43,6 @@ class CheckOut extends Component{
         if(data.checkout >= data.checkin){
             this.props.goToPayment(data);
             this.setState({...this.state, modalOpen: true, data : data, error : ""});
-            // this.props.goToPayment(this.state.data);
         }  
         else {
             this.setState({...this.state, error : "checkout date should be greater then checkin"})
@@ -47,12 +51,16 @@ class CheckOut extends Component{
     }
 
     render(){
-        console.log(this.props);
+        console.log(this.props.selectedRoom.info);
+        
+        if(!this.props.selectedRoom.info){
+            return(<Redirect to = "/" />)
+        }
         
         return(
             <React-fragment>
             <Modal show = {this.state.modalOpen} close = {this.closeModal}>
-                <BookData data = {this.props.bookingData.bookData} room = {this.props.selectedRoom}/>
+                <BookData data = {this.props.bookingData.bookData} room = {this.props.selectedRoom} {...this.props}/>
             </Modal>
 
             <h2>Ready For the booked.....</h2>
