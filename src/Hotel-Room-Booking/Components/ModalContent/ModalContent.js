@@ -3,23 +3,19 @@ import classes from "./ModalContent.module.css";
 import Button from "../UI/button/button";
 
 
-
 const goToCheckOut = (props) => {
-    console.log(props);
-    
-    props.history.push("/rooms/checkout")    
+    props.history.push(props.match.path + "/checkout")    
 }
 
-
-
 const modalContent = (props) => {
+    
     return(
         <div className = {classes.container} >
             <div className = {classes.content}>
-                <img src = {props.roomData.img}></img>
-                <div className = {classes.infoDiv}><p><b style={{color : "mediumBlue"}}>PRICE:-</b>{props.roomData.price} /person</p>
+                <img src = {props.state.modalData.img}></img>
+                <div className = {classes.infoDiv}><p><b style={{color : "mediumBlue"}}>PRICE:-</b>{props.state.modalData.price} /person</p>
                     <b style = {{color : "mediumBlue"}}>INFO:-</b>
-                    <p>{props.roomData.info}</p>
+                    <p>{props.state.modalData.info}</p>
                 </div>
             </div>
             <div className = {classes.btnDiv}>
@@ -32,4 +28,4 @@ const modalContent = (props) => {
 }
 
 
-export default modalContent;
+export default modalContent;    

@@ -1,20 +1,15 @@
-import * as actionTypes from "../actions/actionTypes";
 
-let initialState = {bookData : {}};
+let initialState = {bookData : ""};
 
 const bookingDataReducer = (state = initialState, action) => {
-    switch (actionTypes.BOOK_DATA) {
+    switch (action.type) {
         case "BOOK_DATA":
-
                 return {
                     ...state,
                     bookData : action.data    
                 }
-            break;
-    
         default:
-            return state
-            break;
+            return {...state}
     }
 }
 

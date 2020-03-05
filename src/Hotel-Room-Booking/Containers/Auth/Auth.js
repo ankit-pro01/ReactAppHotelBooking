@@ -93,9 +93,7 @@ class Auth extends Component {
             <div className = {classes.AuthContainer}>
                 <img src= {backImg}></img>
                 <form style = {{"textAlign" : "center"}} onSubmit = {this.handleSubmit} >
-                    <h2 style = {{"color" : "mediumBlue"}}>{Sign}</h2>
-
-                    <Input  type = "email" name = "email" placeholder = "mail id" onChange = {this.handleChange} />
+                    <h2 style = {{"color" : "mediumBlue"}}>{Sign}</h2>                    <Input  type = "email" name = "email" placeholder = "mail id" onChange = {this.handleChange} />
                     {Sign === "Sign In" ? <p style = {{"color" : "red"}}> {this.state.emailError} </p>: null}
 
 

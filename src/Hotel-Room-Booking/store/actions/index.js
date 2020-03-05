@@ -13,3 +13,7 @@ export {
 export {
     bookData
 } from "./bookData";
+
+export {
+    checkOutData
+} from "./checkOutData";

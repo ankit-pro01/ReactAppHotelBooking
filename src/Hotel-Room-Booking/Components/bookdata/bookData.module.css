@@ -1,12 +1,12 @@
 .bookData{
     padding: 10px;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-flow: row wrap ;
 }
 
 .Img {
-    width: 80%;
+    width: 90%;
     box-sizing: border-box;
 }
 
@@ -18,6 +18,20 @@
     box-sizing: border-box;
     width: 80%;
 
+}
+
+.submit{
+    outline: none;
+    padding: 8px;
+    border: none;
+    background-color: darkcyan;
+    color: wheat;
+}
+.submit:hover{
+    outline: none;
+    border: none;
+    background-color: wheat;
+    color: darkcyan;
 }
 
 @media (max-width : 600px){
