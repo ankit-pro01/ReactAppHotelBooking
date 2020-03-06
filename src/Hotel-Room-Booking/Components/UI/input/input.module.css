@@ -13,3 +13,10 @@
     background-color: lightblue;
 }
 
+@media (max-width : 550px){
+    .Label {
+        font-size: small;
+    }
+}
+
+    

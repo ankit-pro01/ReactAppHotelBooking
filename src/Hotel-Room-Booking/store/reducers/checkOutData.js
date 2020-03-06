@@ -3,7 +3,8 @@ import * as actionTypes from "../actions/actionTypes";
 let initialState = {
     loading : false,
     message : null,
-    error : null
+    error : null,
+    bookData : {}
 }
 
 const checkOutDataReducer = (state = initialState, action) => {
@@ -11,28 +12,35 @@ const checkOutDataReducer = (state = initialState, action) => {
         case actionTypes.CHECKOUT_START:
                 return {
                     ...state,
-                    loading : true,    
-                }
-            break;
+                    loading : true,
+                    message : null,
+                    error : null    
+                };
         case actionTypes.CHECKOUT_SUCCESS:
             return {
                 ...state,
                 loading : false,
                 message :  `Room Booked Succesfully your id : ${action.message}`,
                 error : false    
-            }
-            break;
+            };
         case actionTypes.CHECKOUT_FAIL:
                 return {
                     ...state,
                     loading : false,
                     error : action.error
-                }
-            break;    
+                };
+        case actionTypes.BOOK_DATA:
+            return {
+                ...state,
+                bookData : action.data,
+                loading : false,
+                message : null,
+                error : null    
+            };
+
         default:
             return {...state}
-            break;
-    }
+    };
 }
 
 export default checkOutDataReducer;

@@ -32,12 +32,16 @@ h2{
     .checkOut{
         flex-flow: column wrap;
         align-items: flex-start;
+        font-size: 15px;
     }
     .checkOut form {
         width: 90%;
     }
     .Image{
         width: 100%;
+    }
+    h2{
+        font-size: medium;
     }
         
 }

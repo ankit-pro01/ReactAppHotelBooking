@@ -9,8 +9,7 @@ class bookData extends Component{
     state = {
         showCard : false,
         load : true
-    }
-
+    };
 
     handleSubmit = () => {
         let UniqueNumberString = Math.random().toString(36).substring(7);
@@ -19,7 +18,6 @@ class bookData extends Component{
             userData : this.props.data,
             uniqueString :UniqueNumberString
         }
-
         this.props.handleCheckOutData(checkOutData);
         this.setState({load : true})
     }
@@ -29,8 +27,8 @@ class bookData extends Component{
     }
 
     render(){
-        
-        let totalPrice = Math.abs( this.props.selectedRoom.price * this.props.bookingData.bookData.guests * this.props.bookingData.bookData.addrooms);
+
+        let totalPrice = Math.abs( this.props.selectedRoom.price * this.props.checkout.bookData.guests * this.props.checkout.bookData.addrooms);
 
         let cardInput = (<div className = {classes.card}><Input placeholder = "Card Number"></Input>
         <Input placeholder = "cvv"></Input>
@@ -84,26 +82,21 @@ class bookData extends Component{
                     </div>
                     <div>
                         <h5>{this.props.selectedRoom.name}</h5>
-                        <p>Name : {this.props.bookingData.bookData.fullname}</p>
-                        <p>Email : {this.props.bookingData.bookData.email}</p>
-                        <p>Number : {this.props.bookingData.bookData.number}</p>
-                        <p>CheckIn : {this.props.bookingData.bookData.checkin}</p>
-                        <p>CheckOut : {this.props.bookingData.bookData.checkout}</p>
-                        <p>Rooms : {this.props.bookingData.bookData.addrooms}</p>
-                        <p>Guests : {this.props.bookingData.bookData.guests}</p>
+                        <p>Name : {this.props.checkout.bookData.fullname}</p>
+                        <p>Email : {this.props.checkout.bookData.email}</p>
+                        <p>Number : {this.props.checkout.bookData.number}</p>
+                        <p>CheckIn : {this.props.checkout.bookData.checkin}</p>
+                        <p>CheckOut : {this.props.checkout.bookData.checkout}</p>
+                        <p>Rooms : {this.props.checkout.bookData.addrooms}</p>
+                        <p>Guests : {this.props.checkout.bookData.guests}</p>
                         <p>Total Amount : {totalPrice} </p>
                     </div> 
-                        {Message}
-                
+                        {Message}                
                 </div>
+            </React-Fragment>)
 
-            </React-Fragment>
-            
-        )
-
-    
-    return bookData
-        }
+    return (bookData)
+    }
 }
 
 let mapStateToProps = state => {

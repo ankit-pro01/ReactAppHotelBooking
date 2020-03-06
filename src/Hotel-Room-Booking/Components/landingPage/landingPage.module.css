@@ -1,16 +1,174 @@
 .section{
     margin-top: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
 }
 
-.section div {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+.main {
+    margin: auto;
+    padding: 10px;
 }
+
+.heading div{   
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.heading div img{   
+    width: 100%;
+    box-sizing: border-box;
+}
+.heading div h1{
+    margin: 20px auto;
+    font-size: 150%;
+    color: beige;    
+}
+
+.div1 {
+    display: flex;
+    flex-wrap: row wrap;
+}
+.div1 img{
+    width : 40%;
+}
+
+.div2{
+    clear: both;
+    display: flex;
+}
+
+.div2 img{
+    width : 40%;
+}
+
+
 .section div h1{
     text-align: center;
 }
 
-.section div img {
+.rooms {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.rooms .box{
+    position: relative;
+    box-sizing: border-box;
+    width: 25%;
+    padding: 2px;
+    margin: 5px;
+    transition: transform 1s ease;
+
+}
+
+.rooms .box:hover{
+    transform: scale(1.1);
+}
+
+.rooms .box img {
+    border-radius: 10px;
     width: 100%;
+}
+
+.rooms .box .name {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    position: absolute;
+    color: snow;
+    top:0%;
+    background: rgba(0,0,0,0.8);
+    transform: scaleY(0);
+    transition: transform 1s ease;
+}
+.rooms .box:hover .name{
+    transform: scaleY(1);
+}
+
+.rooms div img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.sliderHood{
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 50%
+}
+
+.slider{
+    overflow: hidden;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: slide 10s linear infinite;
+}
+.slider img{
+    border-radius: 20px;
+    width: 20%;
+    float: left;
+}
+
+.footer{
+    font-size: 20px;
+    width: 100%;
+    padding: 5px;
+    color: black;
+    background: rgb(131, 222, 255);
+    display: flex;
+    flex-flow: row wrap;
+   justify-content: space-evenly;
+   align-items: center;
+    
+}
+
+.footer ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+@keyframes slide{
+    0%{
+       left: 0; 
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+
+@media (max-width:550px){
+    .section{
+        font-size: 11px;
+    }
+    .footer{
+        font-size: 12px;
+    }
 }

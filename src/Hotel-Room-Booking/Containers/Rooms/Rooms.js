@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 import classes from "./Rooms.module.css";
 import Title from "../../Components/Title/Title";
-import * as Data from "../../Data/Data";
 import Room from "../../Components/Room/Room";
 import Input from "../../Components/UI/input/input";
-import Button from "../../Components/UI/button/button";
 import * as actions from "../../store/actions/index";
 import {connect} from "react-redux";
 import Modal from "../../Components/modal/modal";
 import ModalContent from "../../Components/ModalContent/ModalContent";
-import { Route } from "react-router-dom";
-import CheckOut from "../CheckOut/CheckOut";
+
 
 class Rooms extends Component {
     state = {
@@ -43,9 +40,6 @@ class Rooms extends Component {
             <form className = {classes.Search} onSubmit = {this.searchButtonHandler}>
                  <Input   type = "input" placeholder = "Room Type"
                  label ="Search Rooms"  onChange = {this.searchHandler} name = "search" />
-                 <Input  type = "date" placeholder = "checkIn" label = "CheckIn" name = "checkIn" />
-                 <Input  type = "date" placeholder = "checkOut" label = "CheckOut" name= "checkOut"/>
-                 <Button type = "submit" >search</Button>
             </form>  
 
         )

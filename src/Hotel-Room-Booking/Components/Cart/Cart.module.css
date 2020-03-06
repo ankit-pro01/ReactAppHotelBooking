@@ -1,0 +1,15 @@
+.cart{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap ;
+}
+
+.cart div{
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.cart img{
+    width: 100%;
+}

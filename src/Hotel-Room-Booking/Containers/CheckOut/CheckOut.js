@@ -17,18 +17,12 @@ class CheckOut extends Component{
         display :false,
     }
 
-    componentDidMount = () => {
-        console.log("hello");
-        
-    }
 
     closeModal = () =>{
         this.setState({modalOpen : false})
     }
 
-    submitHandler = (event) => {
-        console.log(this.props);
-        
+    submitHandler = (event) => { 
         event.preventDefault();
         let data = {
             fullname : event.target.elements.fullname.value,
@@ -50,9 +44,7 @@ class CheckOut extends Component{
         
     }
 
-    render(){
-        console.log(this.props.selectedRoom.info);
-        
+    render(){ 
         if(!this.props.selectedRoom.info){
             return(<Redirect to = "/" />)
         }
@@ -60,10 +52,9 @@ class CheckOut extends Component{
         return(
             <React-fragment>
             <Modal show = {this.state.modalOpen} close = {this.closeModal}>
-                <BookData data = {this.props.bookingData.bookData} room = {this.props.selectedRoom} {...this.props}/>
+                <BookData data = {this.props.checkOut.bookData} room = {this.props.selectedRoom} {...this.props}/>
             </Modal>
-
-            <h2>Ready For the booked.....</h2>
+            <h2>Ready For the booking.....</h2>
             <h2>{this.props.selectedRoom.name}</h2>
             <div className = {classes.checkOut}>
                     <form onSubmit = {this.submitHandler}>
@@ -94,19 +85,15 @@ class CheckOut extends Component{
                 </div>
                 <p>{this.props.selectedRoom.info}</p>
             </div>
-
-            </React-fragment>
-            
+            </React-fragment>            
         )
-
-    }
-    
-}
+    };    
+};
 
 let mapStateToProps = state => {
     return {
         selectedRoom : state.modalData,
-        bookingData : state.bookingData
+        checkOut : state.checkOutData
     }
 }
 let mapStateToDispatch = dispatch => {
@@ -114,6 +101,5 @@ let mapStateToDispatch = dispatch => {
         goToPayment : (userData) => dispatch(actions.bookData(userData))
     }
 }
-
 
 export default connect(mapStateToProps, mapStateToDispatch)(CheckOut);
