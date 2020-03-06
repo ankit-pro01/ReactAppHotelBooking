@@ -29,14 +29,14 @@ export const checkOutFail = (err) => {
     }
 }
 
-export const checkOutData = (data) => {
+export const checkOutData = (data,token) => {
     return dispatch  => {
         dispatch(checkOutStart());
         const checkOutData = {
            data
         };
-        let isLoginIn = false;
-        let url = isLoginIn ?  "": "https://hotel-room-booking-84489.firebaseio.com/randomUser.json"
+        let isLoginIn = token;
+        let url = isLoginIn ?  "https://hotel-room-booking-84489.firebaseio.com/orders.json?auth="+token : "https://hotel-room-booking-84489.firebaseio.com/randomUser.json"
 
         try {
             axios.post(url,checkOutData)

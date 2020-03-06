@@ -9,8 +9,10 @@ const goToCheckOut = (props) => {
 
 
 const modalContent = (props) => {
+    console.log(props.state.modalData.name);
     
     return(
+        
         <div className = {classes.container} >
             <div className = {classes.content}>
                 <img src = {props.state.modalData.img}></img>

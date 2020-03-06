@@ -1,42 +1,55 @@
-body{
-    overflow-x: hidden;
-}
-
 .AuthContainer {
-    margin: auto;
+    font-size: larger;
     padding: 10px;
     width: 100%;
-    width: 80%;
-    box-sizing: border-box;
+    box-sizing: border-box;  
     display: flex;
+    flex-flow: row wrap ;  
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.AuthContainer div{
+    text-align: center;
+
 }
 
 .AuthContainer form{
-    position: relative;
     width: 100%;
     box-sizing: border-box;
 }
 
 .AuthContainer form div{
-    box-sizing: border-box;
     margin: 10px;
     width: 100%;
 }
 
 .AuthContainer img{
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    max-width: 500px;
+}
+
+.doorImage {
+    box-sizing: border-box;
+    position: relative;
+    top: 20%;
+    left: 0;
+    width: 80%;
 }
 
 
 @media (max-width : 800px){
     .AuthContainer {
-        width: 100%;
-        flex-flow: wrap;
+        font-size: 12px;
+        padding: 10px;
+        width: 80%;
+        box-sizing: border-box;  
+        display: flex;
+        flex-flow: column ;  
+        align-items: center;
     }
     .AuthContainer img{
-        width : 80px
+        width : 200px
     }
     
     
