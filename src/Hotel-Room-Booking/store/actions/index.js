@@ -11,9 +11,5 @@ export {
 } from "./modalData";
 
 export {
-    bookData
-} from "./bookData";
-
-export {
-    checkOutData
+    checkOutData,bookData
 } from "./checkOutData";

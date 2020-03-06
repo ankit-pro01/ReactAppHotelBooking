@@ -1,5 +1,13 @@
 .head{
+    font-size: 25px;
     text-align: center;
     color: mediumblue;
     box-sizing: border-box;
+}
+
+
+@media (max-width: 550px){
+    .head h2,h1,h4,h3{
+        font-size: medium;
+    }
 }

@@ -36,6 +36,7 @@
 
 @media (max-width : 600px){
     .bookData{
+        font-size: 12px;
         flex-flow: column wrap;
     }   
     

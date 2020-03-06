@@ -7,16 +7,11 @@
     top : 10%;
     box-sizing: border-box;
     width: 70%;
-    height: 85vh;
+    height: 70vh;
     z-index: 500;
     transition: all 0.3s ease-out;
 }
 
-.close:hover{
-    font-size: 300%;
-    opacity: 1;
-    color: chocolate;
-}
 
 .modal h2{
     text-transform: capitalize;
@@ -26,12 +21,6 @@
     text-align: center;
 }
 
-
-/* @keyframes mymove {
-  from {transform:0px;}
-  to {transform: scale(1.4);}
-
-} */
 
 @media (min-width: 600px) {
     .Modal {

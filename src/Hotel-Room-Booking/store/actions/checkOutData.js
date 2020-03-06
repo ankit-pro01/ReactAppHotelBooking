@@ -2,6 +2,13 @@ import * as actionTypes from './actionTypes';
 
 import axios from "axios";
 
+export const bookData = (userData) => {    
+    return {
+        type : actionTypes.BOOK_DATA,
+        data : userData
+    }
+}
+
 export const checkOutStart = () =>{
     return {
         type : actionTypes.CHECKOUT_START
