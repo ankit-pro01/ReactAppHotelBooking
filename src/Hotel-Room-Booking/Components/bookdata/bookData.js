@@ -18,7 +18,7 @@ class bookData extends Component{
             userData : this.props.data,
             uniqueString :UniqueNumberString
         }
-        this.props.handleCheckOutData(checkOutData);
+        this.props.handleCheckOutData(checkOutData,this.props.auth.token);
         this.setState({load : true})
     }
 
@@ -66,7 +66,7 @@ class bookData extends Component{
         let paymentDetails = paymentMethod;
 
         if(!this.props.checkout.error){
-            paymentDetails = (this.props.checkout.message) ? this.props.checkout.message : paymentMethod;
+            paymentDetails = (this.props.checkout.message) ? (<h2 style = {{color : "green"}}>{this.props.checkout.message}</h2>) : paymentMethod;
         }
         
         
@@ -101,13 +101,14 @@ class bookData extends Component{
 
 let mapStateToProps = state => {
     return {
-        checkout : state.checkOutData
+        checkout : state.checkOutData,
+        auth : state.auth
     }
 }
 
 let mapStateToDispatch = dispatch => {
     return{
-        handleCheckOutData : (checkOutData) => dispatch(actions.checkOutData(checkOutData)) 
+        handleCheckOutData : (checkOutData,token) => dispatch(actions.checkOutData(checkOutData,token)) 
     }
 }
 

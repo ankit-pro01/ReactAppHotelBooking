@@ -22,22 +22,10 @@ class Auth extends Component {
         passwordError : null
     }
 
-    // componentDidMount(){
-    //     fetch("/users").then(res => res.json()).then(result => console.log(result)
-    //      );
-
-    //     console.log("fetching");        
-    // }
-
-    validateFeilds = () =>{
-
-    }
-
     handleSign = () => {
-        this.props.st.error = null;
-        this.props.st.message = null;
         this.setState({isSignIn : !this.state.isSignIn, emailError : null,
             passwordError : null})
+            
     }
 
     handleChange = (event) => {
@@ -70,7 +58,9 @@ class Auth extends Component {
     }
 
 
-    handleSubmit = (event) => {
+    handleSubmit = (event) => {  
+        console.log("clicked");
+              
         event.preventDefault();
         this.props.onAuth(this.state.email, this.state.password, this.state.isSignIn);
 
@@ -79,42 +69,44 @@ class Auth extends Component {
 
 
     render(){
-        let Sign = null
-            Sign = this.state.isSignIn ?  "Sign In" :  "Log In";
+
+        let Sign = null;
+        Sign = this.state.isSignIn ?  "Sign In" :  "Log In";
 
         let buttonConfig = (!(this.state.emailError === "" && this.state.passwordError === "")
         || (this.state.emailError === null && this.state.passwordError === null))
 
-        //let forgotPassword = null;
-
-        let forgotPassword = this.state.isSignIn ? null : <Link style = {{"color" : "Blue"}} to = "/users/forgotpassword" >forgot password</Link>
+        // let forgotPassword = this.state.isSignIn ? null : <Link style = {{"color" : "Blue"}} to = "/users/forgotpassword" >forgot password</Link>
             
         let form = ( 
+            
             <div className = {classes.AuthContainer}>
                 <img src= {backImg}></img>
+                <div>          
                 <form style = {{"textAlign" : "center"}} onSubmit = {this.handleSubmit} >
                     <h2 style = {{"color" : "mediumBlue"}}>{Sign}</h2>                    <Input  type = "email" name = "email" placeholder = "mail id" onChange = {this.handleChange} />
                     {Sign === "Sign In" ? <p style = {{"color" : "red"}}> {this.state.emailError} </p>: null}
-
 
                     <Input  type = "password" name = "password" placeholder = "password" onChange = {this.handleChange}/>
                     {Sign === "Sign In" ? <p style = {{"color" : "red"}}> {this.state.passwordError} </p>: null}
 
                     <Button disabled = {(buttonConfig)}>Submit</Button>
-            
-                    {forgotPassword}   
 
-                    <Button clicked = {this.handleSign}>{Sign === "Sign In"?  "Log In" : "Sign-In"}</Button>
-
-                    <p style = {{"color" : "red"}}>{this.props.st.message}</p>
-                    <img src= {formImg}></img>
+                    {/* {forgotPassword}    */}
+                    <p style = {{"color" : "red"}}>{this.props.st.auth.message}</p>
                 </form>
+                <Button clicked = {this.handleSign}>{Sign === "Sign In"?  "Log In" : "Sign-In"}</Button>
+                <div>
+                <img src= {formImg}></img>
+                </div>
+                </div>
+                
 
             </div>
             
         );
 
-        if( this.props.st.loading ){
+        if( this.props.st.auth.loading ){
             form = <Spinner />
         }
         
