@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./landingPage.module.css";
-import Aux from "../../HOC/Auxc/Auxi";
 import TravelPlanImg from "../../assets/img/draw/travelPlans.svg";
 import BookedImg from "../../assets/img/draw/booked.svg";
 import headImage from "../../assets/img/landingpage/landingImage3.jpg";
@@ -15,12 +14,12 @@ import image8 from "../../assets/img/rooms/room11.jpg";
 
 const landingPage = () => {
     return(
-        <Aux>
+        <React-Fragment>
             <section className = {classes.section}>
                     <header className = {classes.heading}>
                         <div>
                             <h1>WELCOME TO KAKSHH...</h1>
-                            <img src = {headImage}></img>
+                            <img src = {headImage}  alt = ""></img>
                         </div>
                     </header>
                     <main className = {classes.main}>
@@ -31,17 +30,17 @@ const landingPage = () => {
                                 <h2>Contents</h2>
                                 <div className = {classes.rooms}>
                                     <div className = {classes.box}>
-                                        <img src = {image1}></img>
+                                        <img src = {image1} alt = ""></img>
                                         <p className = {classes.name}>single bed Room</p>
                                         <p>Nostrud sint voluptate eu deserunt et esse aliquip mollit nisi aute eiusmod eiusmod nostrud amet. </p>
                                     </div>
                                     <div className = {classes.box}>
-                                        <img src = {image2}></img>
+                                        <img src = {image2} alt = ""></img>
                                         <p className = {classes.name}>double bed Room</p>
                                         <p>Nostrud sint voluptate eu deserunt et esse aliquip mollit nisi aute eiusmod eiusmod nostrud amet. </p>
                                     </div>
                                     <div className = {classes.box}>
-                                        <img src = {image3}></img>
+                                        <img src = {image3} alt = ""></img>
                                         <p className = {classes.name}>luxury bed Room</p>
                                         <p>Nostrud sint voluptate eu deserunt et esse aliquip mollit nisi aute eiusmod eiusmod nostrud amet. </p>
                                     </div>
@@ -53,7 +52,7 @@ const landingPage = () => {
                       
 
                         <div className = {classes.div1}>
-                            <img src = {BookedImg}></img>
+                            <img src = {BookedImg} alt = ""></img>
                             <p>Voluptate esse laboris nulla proident sint aliquip nulla fugiat laboris anim elit reprehenderit reprehenderit. Pariatur veniam culpa irure ullamco consequat voluptate aliqua excepteur in. Adipisicing aute nostrud ullamco sunt minim nulla eu enim ut qui commodo dolore.
                                 Ipsum et ex consectetur sunt culpa qui magna mollit anim. Occaecat eu officia est consectetur voluptate. Cupidatat aliqua enim enim do veniam ullamco sit.
                                 Consequat est aute culpa fugiat amet ut reprehenderit officia consectetur incididunt sunt. Exercitation qui aliqua nisi laborum exercitation aute consequat culpa. Quis excepteur in sint Lorem pariatur cillum sit. Adipisicing aute sit officia dolor est. Occaecat aliquip Lorem ea ex eiusmod proident occaecat veniam adipisicing. Nisi fugiat ea deserunt eiusmod commodo cillum tempor.
@@ -62,18 +61,18 @@ const landingPage = () => {
                         <h2>Gallery</h2>
                         <div className = {classes.sliderHood}>
                             <div className = {classes.slider}>
-                                <img src= {image4}></img>
-                                <img src= {image5}></img>
-                                <img src= {image6}></img>
-                                <img src= {image7}></img>
-                                <img src= {image8}></img>
+                                <img src= {image4} alt = ""></img>
+                                <img src= {image5} alt = ""></img>
+                                <img src= {image6} alt = ""></img>
+                                <img src= {image7} alt = ""></img>
+                                <img src= {image8} alt = ""></img>
                             </div>
                         </div>
                         <div className = {classes.div2}>    
                             <p>Do ipsum cupidatat culpa cupidatat ad. Irure veniam ut eiusmod esse ullamco aute aliquip labore est laboris sit voluptate. Deserunt consectetur mollit reprehenderit nostrud aliquip nisi est duis id dolore.
                                 Laboris esse do culpa non reprehenderit velit nisi esse magna eiusmod deserunt. Labore ea cupidatat velit eu labore consequat consectetur est commodo. Sint id nostrud enim id consequat sunt do voluptate. Qui tempor laborum ullamco tempor labore est. Reprehenderit ad quis adipisicing aliqua ut laborum mollit occaecat reprehenderit laborum cillum non veniam consequat. In laboris ad est laboris culpa id consequat duis qui officia elit qui.
                             Do elit aliquip incididunt nostrud. Nostrud ipsum sit id eiusmod deserunt eu. Et et reprehenderit esse nulla sunt culpa et reprehenderit nostrud sit Lorem anim. Anim esse sit aliqua excepteur.</p>
-                            <img src= {TravelPlanImg}></img>
+                            <img src= {TravelPlanImg} alt = ""></img>
                         </div>
                         
                     </main>
@@ -90,9 +89,9 @@ const landingPage = () => {
                     </div>
                     <div></div>
                     <ul><strong>FOLLOW US</strong>
-                        <li><a href ="#">Insta</a></li>
-                        <li><a href ="#"><i className="fab fa-facebook"></i>facebook</a></li>
-                        <li><a href ="#">linkdin</a></li>
+                        <li><a href ="/">Insta</a></li>
+                        <li><a href ="/"><i className="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href ="/">linkdin</a></li>
                     </ul>
                         
                     <div>
@@ -106,7 +105,7 @@ const landingPage = () => {
                 </div>
             </footer>
             
-        </Aux>
+        </React-Fragment>
 
     )
 }

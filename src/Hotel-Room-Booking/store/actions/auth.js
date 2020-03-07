@@ -56,7 +56,6 @@ export const auth = (email, password, isSignIn) => {
 
         axios.post(url,authData)
         .then(response => { 
-            let message = response.data.message;
             let token = response.data.idToken;
             let userId = response.data.localId;
             dispatch(authSuccess(token, userId));
@@ -64,9 +63,13 @@ export const auth = (email, password, isSignIn) => {
 
         })
         .catch(err => {            
-            console.log(err.response.data.error);        
-            dispatch(authFail(err.response.data.error.message))
+            if(err.response){
+                dispatch(authFail(err.response.data.error.message))
             }
+            else{
+                dispatch(authFail("Something Went wrong"))
+            }       
+        }
         )
     }
 }

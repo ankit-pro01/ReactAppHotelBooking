@@ -7,6 +7,7 @@ export const SEARCH_ROOM = "SEARCH_ROOM";
 export const MODAL_DATA = "MODAL_DATA";
 export const CHECK_OUT = "CHECK_OUT";
 export const BOOK_DATA = "BOOK_DATA";
+// export const TOTAL_PRICE = "TOTAL_PRICE";
 
 export const CHECKOUT_START = "CHECKOUT_START";
 export const CHECKOUT_SUCCESS = "CHECKOUT_SUCCESS"

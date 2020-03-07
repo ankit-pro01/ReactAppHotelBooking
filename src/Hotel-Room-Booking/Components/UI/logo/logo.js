@@ -1,8 +1,6 @@
 import React from "react";
 import myLogo from "../../../assets/img/logo/resort-icon.png";
 import classes from "./logo.module.css";
-import {Redirect} from "react-router-dom";
-
 
 const logo = (props) => {
     return(

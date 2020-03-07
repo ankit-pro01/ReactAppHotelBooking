@@ -9,6 +9,13 @@ export const bookData = (userData) => {
     }
 }
 
+// export const totalPrice = (price) => {
+//     return {
+//         type : actionTypes.TOTAL_PRICE,
+//         totalPrice : price
+//     }
+// }
+
 export const checkOutStart = () =>{
     return {
         type : actionTypes.CHECKOUT_START
@@ -45,10 +52,7 @@ export const checkOutData = (data,token) => {
             dispatch(checkOutSuccess(message))
         })
         .catch(err => {    
-            console.log(err);            
-            //dispatch(checkOutFail(err.response.data.message))
             dispatch(checkOutFail(err))
-
             }
         )
             

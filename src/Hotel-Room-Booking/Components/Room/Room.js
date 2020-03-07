@@ -5,7 +5,7 @@ const room = (props) => {
     return(
         <div className = {classes.box} onClick = {props.click}>
             <div>
-                <img src= {props.imgSrc}></img>
+                <img src= {props.imgSrc} alt = ""></img>
                 {props.name}
             </div>
             
