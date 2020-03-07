@@ -22,7 +22,7 @@ const sidebar = (props) => {
                 <Navigation style = {style} />
             </nav>
             <div>
-                <img src = {navImg}></img>
+                <img src = {navImg} alt = ""></img>
             </div>
         </div>
     )

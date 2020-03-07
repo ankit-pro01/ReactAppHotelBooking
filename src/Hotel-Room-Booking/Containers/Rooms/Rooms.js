@@ -28,7 +28,6 @@ class Rooms extends Component {
     }
 
     handleModal = (data) => {
-
             this.setState({...this.state, showModal : !this.state.showModal})
             this.props.handleModalData(data);
         }

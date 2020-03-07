@@ -8,14 +8,12 @@ const goToCheckOut = (props) => {
 }
 
 
-const modalContent = (props) => {
-    console.log(props.state.modalData.name);
-    
+const modalContent = (props) => {    
     return(
         
         <div className = {classes.container} >
             <div className = {classes.content}>
-                <img src = {props.state.modalData.img}></img>
+                <img src = {props.state.modalData.img} alt= ""></img>
                 <div className = {classes.infoDiv}><p><b style={{color : "mediumBlue"}}>PRICE:-</b>{props.state.modalData.price} /person</p>
                     <b style = {{color : "mediumBlue"}}>INFO:-</b>
                     <p>{props.state.modalData.info}</p>

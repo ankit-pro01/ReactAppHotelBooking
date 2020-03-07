@@ -11,10 +11,11 @@ class bookData extends Component{
         load : true
     };
 
-    handleSubmit = () => {
+    handleSubmit = (totalPrice) => {
         let UniqueNumberString = Math.random().toString(36).substring(7);
         let checkOutData = {
             room : this.props.selectedRoom,
+            totalPrice :totalPrice,
             userData : this.props.data,
             uniqueString :UniqueNumberString
         }
@@ -59,7 +60,7 @@ class bookData extends Component{
                         </button>
                     </p>
                     {this.state.showCard ? cardInput : ""}
-                    <button onClick = {this.handleSubmit} className = {classes.submit}>submit</button>
+                    <button onClick = {() => this.handleSubmit(totalPrice)} className = {classes.submit}>submit</button>
                     {paymentFail}
                 </div>)
         
@@ -78,7 +79,7 @@ class bookData extends Component{
 
                 <div className = {classes.bookData}> 
                     <div className = {classes.Img}>
-                        <img src = {this.props.selectedRoom.img}></img>
+                        <img src = {this.props.selectedRoom.img} alt = ""></img>
                     </div>
                     <div>
                         <h5>{this.props.selectedRoom.name}</h5>

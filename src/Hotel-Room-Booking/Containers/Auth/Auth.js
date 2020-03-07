@@ -3,7 +3,6 @@ import Input from '../../Components/UI/input/input';
 import Spinner from '../../Components/UI/Spinner/spinner';
 import classes from "./Auth.module.css";
 import Button from "../../Components/UI/button/button";
-import { Link } from "react-router-dom";
 import {connect} from "react-redux";
 import * as actions from '../../store/actions/index';
 import backImg from "../../assets/img/loginImg/Login.svg";
@@ -19,7 +18,8 @@ class Auth extends Component {
         password : null,
         er : null,
         emailError : null,
-        passwordError : null
+        passwordError : null,
+        networkError : null 
     }
 
     handleSign = () => {
@@ -58,15 +58,16 @@ class Auth extends Component {
     }
 
 
-    handleSubmit = (event) => {  
-        console.log("clicked");
-              
-        event.preventDefault();
+    handleSubmit = (event) => {        
+        if(this.state.networkError){
+            event.preventDefault();
         this.props.onAuth(this.state.email, this.state.password, this.state.isSignIn);
+        }        
+        else{
+            this.props.onAuth(this.state.email, this.state.password, this.state.isSignIn);
+        }
 
     }
-
-
 
     render(){
 
@@ -81,7 +82,7 @@ class Auth extends Component {
         let form = ( 
             
             <div className = {classes.AuthContainer}>
-                <img src= {backImg}></img>
+                <img src= {backImg} alt = ""></img>
                 <div>          
                 <form style = {{"textAlign" : "center"}} onSubmit = {this.handleSubmit} >
                     <h2 style = {{"color" : "mediumBlue"}}>{Sign}</h2>                    <Input  type = "email" name = "email" placeholder = "mail id" onChange = {this.handleChange} />
@@ -97,7 +98,7 @@ class Auth extends Component {
                 </form>
                 <Button clicked = {this.handleSign}>{Sign === "Sign In"?  "Log In" : "Sign-In"}</Button>
                 <div>
-                <img src= {formImg}></img>
+                <img src= {formImg} alt = ""></img>
                 </div>
                 </div>
                 

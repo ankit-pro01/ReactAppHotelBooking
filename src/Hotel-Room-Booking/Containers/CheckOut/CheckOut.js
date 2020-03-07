@@ -33,13 +33,28 @@ class CheckOut extends Component{
             checkout : event.target.elements.checkout.value,
             addrooms : event.target.elements.addrooms.value,
             guests : event.target.elements.guests.value,
-        }        
-        if(data.checkout >= data.checkin){
+        }    
+        let inputError = "";
+                
+        if(! (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.email))){
+            inputError = "Invalid Email";
+        };
+
+        if(!(/^\d{10}$/.test(data.number))){
+            inputError = "Invalid Phone Number";
+        };
+
+        if(data.checkout < data.checkin){
+            inputError = "checkOut Data Should be greater or equal to checkIn";
+        }   
+        
+        if(inputError === ""){
             this.props.goToPayment(data);
             this.setState({...this.state, modalOpen: true, data : data, error : ""});
-        }  
-        else {
-            this.setState({...this.state, error : "checkout date should be greater then checkin"})
+        }
+        else{
+            this.setState({...this.state, error : inputError});
+    
         }
         
     }
@@ -81,7 +96,7 @@ class CheckOut extends Component{
                         <span style = {{fontWeight : "bold",color: "red"}}>{this.state.error}</span>
                     </form>
                 <div className = {classes.Image}>
-                <img src = {this.props.selectedRoom.img}></img>
+                <img src = {this.props.selectedRoom.img} alt = ""></img>
                 </div>
                 <p>{this.props.selectedRoom.info}</p>
             </div>

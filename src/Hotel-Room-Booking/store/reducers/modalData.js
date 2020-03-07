@@ -6,7 +6,8 @@ let initialState = {
     info : null, 
     price : null,
     checkOutData : null,
-    displayCheckOut : false}
+    displayCheckOut : false
+}
 
 const modalDataReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -21,7 +22,7 @@ const modalDataReducer = (state = initialState, action) => {
         case actionTypes.CHECK_OUT:
             return {
                 ...state,
-                checkOutData : action.data
+                checkOutData : action.data,
             }
     
         default:
