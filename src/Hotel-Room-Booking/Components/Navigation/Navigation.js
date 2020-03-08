@@ -8,7 +8,7 @@ const navigation = (props) => {
         <ul className = {classes.navigation} style = {props.style}>
             <NavigationItem link = "/"> Home </NavigationItem>
             <NavigationItem link = "/rooms"> Rooms</NavigationItem>
-            {props.logInCheck ? <NavigationItem link = "/logOut">LogOut </NavigationItem> :<NavigationItem link = "/signUp">SignUp/In </NavigationItem>}
+            {props.logInCheck ? <NavigationItem link = "/logOut">Logout </NavigationItem> :<NavigationItem link = "/signUp">SignUp/In </NavigationItem>}
             <NavigationItem link = "/Cart"> Cart </NavigationItem>
         </ul>
     )

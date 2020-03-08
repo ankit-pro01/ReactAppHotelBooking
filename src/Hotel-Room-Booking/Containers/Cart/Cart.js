@@ -2,7 +2,7 @@ import React , {Component }from "react";
 import classes from './Cart.module.css';
 import cartImage from "../../assets/img/Cart/cart.svg";
 import {connect} from "react-redux";
-import Spinner from "../UI/Spinner/spinner";
+import Spinner from "../../Components/UI/Spinner/spinner";
 
 class Cart extends Component{
     state = {
