@@ -3,6 +3,7 @@ import Toolbar from "../../Components/Navigation/Toolbar/Toolbar";
 import classes from "./Layout.module.css";
 import Sidebar from '../../Components/Navigation/Sidebar/Sidebar/Sidebar';
 import Backdrop from "../../Components/UI/backdrop/backdrop";
+import {connect} from "react-redux";
 
 class Layout extends Component {
     state = {
@@ -15,10 +16,11 @@ class Layout extends Component {
     };
 
     render() {
+        let isLogin = this.props.auth.token;
         return (
             <React-Fragment>           
-                <Toolbar toggleClick = {this.handleToolBar}/>
-                <Sidebar show =  {this.state.sidebarOpen}/>
+                <Toolbar toggleClick = {this.handleToolBar} logInCheck = {isLogin}/>
+                <Sidebar show =  {this.state.sidebarOpen} logInCheck = {isLogin}/>
                 <Backdrop show = {this.state.sidebarOpen} click = {this.handleToolBar} />
                 <main className = {classes.Content}>
                     {this.props.children}
@@ -28,4 +30,10 @@ class Layout extends Component {
     };
 };
 
-export default Layout;
+let mapStateToProps = (state) => {
+    return {
+        auth : state.auth
+    }
+}
+
+export default connect(mapStateToProps)(Layout);

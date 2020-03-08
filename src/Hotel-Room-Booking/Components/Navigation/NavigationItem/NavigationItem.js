@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import classes from './NavigationItem.module.css'
 
 const navigationItem = (props) => {
+    
     return(
         <li className = {classes.NavigationItem}>
-            <NavLink to = {props.link} >{props.children}</NavLink> 
+            <NavLink to = {props.link}>{props.children}</NavLink> 
         </li>
     )
 }

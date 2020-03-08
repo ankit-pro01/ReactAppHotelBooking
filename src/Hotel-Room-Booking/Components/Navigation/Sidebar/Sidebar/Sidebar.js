@@ -19,7 +19,7 @@ const sidebar = (props) => {
                 <Logo width = "40%"/>
             </div>
             <nav>
-                <Navigation style = {style} />
+                <Navigation style = {style} logInCheck = {props.logInCheck}/>
             </nav>
             <div>
                 <img src = {navImg} alt = ""></img>

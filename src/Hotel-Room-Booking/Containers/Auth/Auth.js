@@ -7,6 +7,7 @@ import {connect} from "react-redux";
 import * as actions from '../../store/actions/index';
 import backImg from "../../assets/img/loginImg/Login.svg";
 import formImg from "../../assets/img/loginImg/forgot_password.svg"
+import { Redirect } from "react-router-dom";
 
 class Auth extends Component {
 
@@ -66,10 +67,13 @@ class Auth extends Component {
         else{
             this.props.onAuth(this.state.email, this.state.password, this.state.isSignIn);
         }
-
     }
 
     render(){
+        
+        if(this.props.st.auth.token){
+            return (<Redirect to = "/rooms" />)
+        }
 
         let Sign = null;
         Sign = this.state.isSignIn ?  "Sign In" :  "Log In";

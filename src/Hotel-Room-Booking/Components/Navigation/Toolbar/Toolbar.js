@@ -5,12 +5,13 @@ import classes from "./Toolbar.module.css";
 import Toggle from "../Sidebar/Toggle/toggle";
 
 const toolbar = (props) => {
+    
     return(
         <header className = {classes.Toolbar}>
             <Toggle click = {props.toggleClick}/>
             <Logo />
             <nav>
-                <Navigation />
+                <Navigation logInCheck = {props.logInCheck}/>
             </nav>
         </header>
     )
