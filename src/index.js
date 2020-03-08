@@ -15,7 +15,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 const app = (
 
         <Provider store = {store}>
-            <BrowserRouter basename = "/ReactAppHotelBooking/">
+            <BrowserRouter basename = {process.env.PUBLIC_URL}>
                 <App />
             </BrowserRouter>
         </Provider>
