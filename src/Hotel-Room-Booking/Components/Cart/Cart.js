@@ -71,15 +71,15 @@ class Cart extends Component{
                                 <p>{obj.data.room.name}</p>
                             </div>
                             <div>
-                                <p><strong>guests :</strong>{obj.data.userData.guests}</p>
-                                <p><strong>Rooms :</strong>{obj.data.userData.addrooms}</p>
-                                <p>checkIn :<strong>{obj.data.userData.checkIn}</strong></p>
-                                <p>checkOut :<strong>{obj.data.userData.checkOut}</strong></p>
+                                <p><strong>guests : </strong>{ obj.data.userData.guests}</p>
+                                <p><strong>Rooms : </strong>{ obj.data.userData.addrooms}</p>
+                                <p><strong>checkIn : </strong>{ obj.data.userData.checkin}</p>
+                                <p><strong>checkOut : </strong>{ obj.data.userData.checkout}</p>
                             </div>
                             <div>
-                                <p><strong>booked for :</strong>{obj.data.userData.fullname}</p>
-                                <p><strong>code :</strong>{obj.data.uniqueString}</p>
-                                <p><strong>Total Price :</strong>{obj.data.totalPrice}</p>
+                                <p><strong>booked for : </strong>{obj.data.userData.fullname}</p>
+                                <p><strong>code : </strong>{obj.data.uniqueString}</p>
+                                <p><strong>Total Price : </strong>{obj.data.totalPrice}</p>
                             </div>
                         </div>)})}
                 </div>
