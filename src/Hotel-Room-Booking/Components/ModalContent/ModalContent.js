@@ -1,12 +1,7 @@
 import React from "react";
 import classes from "./ModalContent.module.css";
 import Button from "../UI/button/button";
-
-
-const goToCheckOut = (props) => {
-    props.history.push(props.match.path + "/checkout")    
-}
-
+import { Link } from "react-router-dom";
 
 const modalContent = (props) => {    
     return(
@@ -20,7 +15,7 @@ const modalContent = (props) => {
                 </div>
             </div>
             <div className = {classes.btnDiv}>
-                <Button clicked = {() => goToCheckOut(props)}>continue</Button>
+                <Link to= "/rooms/checkout"><Button>continue</Button></Link>
 
             </div>
         </div>
