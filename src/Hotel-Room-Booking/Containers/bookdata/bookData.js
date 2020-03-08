@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import classes from "./bookData.module.css";
-import Input from "../UI/input/input";
+import Input from "../../Components/UI/input/input";
 import * as actions from "../../store/actions/checkOutData";
 import {connect} from "react-redux";
-import Spinner from "../UI/Spinner/spinner";
+import Spinner from "../../Components/UI/Spinner/spinner";
 
 class bookData extends Component{
     state = {

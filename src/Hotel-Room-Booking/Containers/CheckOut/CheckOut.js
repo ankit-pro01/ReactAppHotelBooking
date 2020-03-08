@@ -5,7 +5,7 @@ import Input from "../../Components/UI/input/input"
 import Button from "../../Components/UI/button/button";
 import * as actions from "../../store/actions/index";
 import Modal from "../../Components/modal/modal";
-import BookData from "../../Components/bookdata/bookData";
+import BookData from "../../Containers/bookdata/bookData";
 import {Redirect} from "react-router-dom";
 
 class CheckOut extends Component{

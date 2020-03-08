@@ -15,7 +15,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 const app = (
 
         <Provider store = {store}>
-            <BrowserRouter>
+            <BrowserRouter basename = "/Hotel-Room-Booking/">
                 <App />
             </BrowserRouter>
         </Provider>

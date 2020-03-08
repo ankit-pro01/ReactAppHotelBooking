@@ -3,7 +3,7 @@ import './App.css';
 import { Route } from 'react-router-dom';
 import Layout from './Hotel-Room-Booking/HOC/Layout/Layout';
 import Auth from './Hotel-Room-Booking/Containers/Auth/Auth';
-import Cart from "./Hotel-Room-Booking/Components/Cart/Cart"
+import Cart from "./Hotel-Room-Booking/Containers/Cart/Cart"
 import Rooms from './Hotel-Room-Booking/Containers/Rooms/Rooms';
 import LandingPage from './Hotel-Room-Booking/Components/landingPage/landingPage';
 import CheckOut from './Hotel-Room-Booking/Containers/CheckOut/CheckOut';
