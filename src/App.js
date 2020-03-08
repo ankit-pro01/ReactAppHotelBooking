@@ -15,11 +15,11 @@ class App  extends Component {
             <div className = "App" >
                 <Route path = "/" exact component = {LandingPage}></Route>
                 <Layout>
-                    <Route path = "/signUp"  component = {Auth}></Route>
+                    <Route path = "/signUp"  exact component = {Auth}></Route>
                     <Route path = "/rooms" exact component = {Rooms}></Route>
                     <Route path = "/rooms/checkout" exact component = {CheckOut}></Route>
                     <Route path = "/cart" exact component = {Cart}></Route>
-                    <Route path = "/logOut" component = {LogOut}></Route>
+                    <Route path = "/logOut" exact component = {LogOut}></Route>
                 </Layout>
             </div>
         )
