@@ -46,7 +46,13 @@ class CheckOut extends Component{
 
         if(data.checkout < data.checkin){
             inputError = "checkOut Data Should be greater or equal to checkIn";
-        }   
+        };
+
+        let date = new Date();
+        
+        if(date > new Date(data.checkin)){
+            inputError = "Invalid Date : past date";
+        };    
         
         if(inputError === ""){
             this.props.goToPayment(data);

@@ -20,7 +20,7 @@ class Layout extends Component {
         return (
             <React-Fragment>           
                 <Toolbar toggleClick = {this.handleToolBar} logInCheck = {isLogin}/>
-                <Sidebar show =  {this.state.sidebarOpen} logInCheck = {isLogin}/>
+                <Sidebar show =  {this.state.sidebarOpen} logInCheck = {isLogin}clicked = {this.handleToolBar} />
                 <Backdrop show = {this.state.sidebarOpen} click = {this.handleToolBar} />
                 <main className = {classes.Content}>
                     {this.props.children}

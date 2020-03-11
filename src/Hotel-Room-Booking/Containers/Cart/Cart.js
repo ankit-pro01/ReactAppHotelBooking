@@ -9,7 +9,8 @@ class Cart extends Component{
         loading : false,
         ordersLists : null,
         room : null,
-        error : true
+        error : true,
+        token : null
     }
 
     componentDidMount(){

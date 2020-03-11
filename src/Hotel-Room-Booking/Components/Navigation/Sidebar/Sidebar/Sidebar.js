@@ -14,7 +14,7 @@ const sidebar = (props) => {
             paddingTop: "50px",
     }    
     return(
-        <div className = {classes.Sidebar} style = {{transform : props.show ? "translateX(0)": "translateX(-100vh)"}}>
+        <div className = {classes.Sidebar} style = {{transform : props.show ? "translateX(0)": "translateX(-100vh)"}} onClick = {props.clicked}>
             <div>
                 <Logo width = "40%"/>
             </div>

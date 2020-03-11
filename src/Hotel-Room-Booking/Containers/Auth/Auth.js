@@ -20,7 +20,7 @@ class Auth extends Component {
         er : null,
         emailError : null,
         passwordError : null,
-        networkError : null 
+        networkError : null,
     }
 
     handleSign = () => {
@@ -69,7 +69,7 @@ class Auth extends Component {
         }
     }
 
-    render(){
+    render(){        
         
         if(this.props.st.auth.token){
             return (<Redirect to = "/rooms" />)

@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
-
 import axios from "axios";
+require('dotenv').config();
+
 
 
 export const logout = () => {
@@ -50,9 +51,10 @@ export const auth = (email, password, isSignIn) => {
             returnSecureToken : true,
         };
 
-        let signInUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCG-CSfmkCxF7_TSp8Ewrt6FdNHYIqzzMQ";
 
-        let url = isSignIn ? signInUrl : "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCG-CSfmkCxF7_TSp8Ewrt6FdNHYIqzzMQ"
+        let signInUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_API_KEY}`;
+
+        let url = isSignIn ? signInUrl : `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_API_KEY}`
 
         axios.post(url,authData)
         .then(response => { 

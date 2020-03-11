@@ -1,6 +1,6 @@
 import React, {Component}  from 'react';
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Layout from './Hotel-Room-Booking/HOC/Layout/Layout';
 import Auth from './Hotel-Room-Booking/Containers/Auth/Auth';
 import Cart from "./Hotel-Room-Booking/Containers/Cart/Cart"
@@ -13,14 +13,17 @@ class App  extends Component {
     render(){
         return (
             <div className = "App" >
-                <Route path = "/" exact component = {LandingPage}></Route>
+                <Switch>
                 <Layout>
+                    <Route path = "/" exact component = {LandingPage}></Route>
                     <Route path = "/signUp"  exact component = {Auth}></Route>
                     <Route path = "/rooms" exact component = {Rooms}></Route>
                     <Route path = "/rooms/checkout" exact component = {CheckOut}></Route>
                     <Route path = "/cart" exact component = {Cart}></Route>
                     <Route path = "/logOut" exact component = {LogOut}></Route>
+                    <Redirect to = "/" />                    
                 </Layout>
+                </Switch>
             </div>
         )
     }
