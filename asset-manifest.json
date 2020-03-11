@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ReactAppHotelBooking/static/css/main.7789423d.chunk.css",
-    "main.js": "/ReactAppHotelBooking/static/js/main.0f46a682.chunk.js",
-    "main.js.map": "/ReactAppHotelBooking/static/js/main.0f46a682.chunk.js.map",
+    "main.js": "/ReactAppHotelBooking/static/js/main.766d60db.chunk.js",
+    "main.js.map": "/ReactAppHotelBooking/static/js/main.766d60db.chunk.js.map",
     "runtime~main.js": "/ReactAppHotelBooking/static/js/runtime~main.aeccf14b.js",
     "runtime~main.js.map": "/ReactAppHotelBooking/static/js/runtime~main.aeccf14b.js.map",
     "static/js/2.5645c20f.chunk.js": "/ReactAppHotelBooking/static/js/2.5645c20f.chunk.js",
     "static/js/2.5645c20f.chunk.js.map": "/ReactAppHotelBooking/static/js/2.5645c20f.chunk.js.map",
     "index.html": "/ReactAppHotelBooking/index.html",
-    "precache-manifest.b48c67b2391bf7de74bfbffdf4d08161.js": "/ReactAppHotelBooking/precache-manifest.b48c67b2391bf7de74bfbffdf4d08161.js",
+    "precache-manifest.b29b2cdd964dbb46d7d7ed726a50be78.js": "/ReactAppHotelBooking/precache-manifest.b29b2cdd964dbb46d7d7ed726a50be78.js",
     "service-worker.js": "/ReactAppHotelBooking/service-worker.js",
     "static/css/main.7789423d.chunk.css.map": "/ReactAppHotelBooking/static/css/main.7789423d.chunk.css.map",
     "static/media/App.css": "/ReactAppHotelBooking/static/media/CoolSky.8d54e7f5.jpg",
