@@ -39,9 +39,11 @@ export const checkOutFail = (err) => {
 export const checkOutData = (data,token) => {
     return dispatch  => {
         dispatch(checkOutStart());
+        let userId = localStorage.getItem('userId')
         const checkOutData = {
-           data
+           data,userId
         };
+        let token = localStorage.getItem('token');        
         let isLoginIn = token;
         let url = isLoginIn ?  "https://hotel-room-booking-84489.firebaseio.com/orders.json?auth="+token : "https://hotel-room-booking-84489.firebaseio.com/randomUser.json"
 

@@ -16,7 +16,7 @@ class Layout extends Component {
     };
 
     render() {
-        let isLogin = this.props.auth.token;
+        let isLogin = localStorage.getItem('token');
         return (
             <React-Fragment>           
                 <Toolbar toggleClick = {this.handleToolBar} logInCheck = {isLogin}/>

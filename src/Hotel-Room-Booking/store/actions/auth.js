@@ -5,6 +5,9 @@ require('dotenv').config();
 
 
 export const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    
     return {
         type : actionTypes.AUTH_LOGOUT,
     };
@@ -60,6 +63,9 @@ export const auth = (email, password, isSignIn) => {
         .then(response => { 
             let token = response.data.idToken;
             let userId = response.data.localId;
+            localStorage.setItem('token',token);
+            localStorage.setItem('userId',userId);
+
             dispatch(authSuccess(token, userId));
             dispatch(checkAuthTimeOut(response.data.expiresIn))
 

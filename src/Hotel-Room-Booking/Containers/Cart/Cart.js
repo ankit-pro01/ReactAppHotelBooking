@@ -10,7 +10,6 @@ class Cart extends Component{
         ordersLists : null,
         room : null,
         error : true,
-        token : null
     }
 
     componentDidMount(){
@@ -20,8 +19,16 @@ class Cart extends Component{
             this.setState({loading : true})
             let orders = [];
             let res;
+            
             try{
-                let data = await fetch("https://hotel-room-booking-84489.firebaseio.com/orders.json?auth="+this.props.auth.token);            
+                // let data = await fetch("https://hotel-room-booking-84489.firebaseio.com/orders.json?auth="+this.props.auth.token);
+                
+                let userId = `"${localStorage.getItem('userId')}"`;
+
+                let QueryUrl = 'https://hotel-room-booking-84489.firebaseio.com/orders.json?auth=' +localStorage.getItem('token') + '&orderBy="userId"&equalTo=' + userId;
+                
+                let data = await fetch(QueryUrl); 
+
                 res = await data.json();
 
                 if(res.error){
@@ -89,7 +96,7 @@ class Cart extends Component{
             );   
     }
 
-        return((this.state.loading ? <Spinner /> : (this.props.auth.token ? LogIn : notLogIn)))
+        return((this.state.loading ? <Spinner /> : (localStorage.getItem('token') ? LogIn : notLogIn)))
     }
 }
 
